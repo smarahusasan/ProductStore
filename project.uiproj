@@ -1,0 +1,6 @@
+{
+  "Name": "ProductStore",
+  "ProjectType": "Process",
+  "Description": "Automation for DemoBlaze",
+  "MainFile": "Main.xaml"
+}
