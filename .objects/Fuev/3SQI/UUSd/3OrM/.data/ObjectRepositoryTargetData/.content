@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YuCNm-mHPU6Kpkcj40nWfw" Reference="VLyBuG8JQ0qruJW2fqyr9w/3OrMS7-_5E2zT_geVubAzQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="1c906ca3-35ee-4b42-ae5a-abf2fd07d40c" CvElementArea="665, 412, 588, 50" CvType="InputBox" DesignTimeRectangle="667, 414, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='loginusername' tag='INPUT' /&gt;" Guid="8eade640-01cc-4a09-bcd1-6d19b05c1e7f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="1c906ca3-35ee-4b42-ae5a-abf2fd07d40c" CvTextArea="665, 361, 88, 16" CvTextArgument="Username:" CvType="Text" DesignTimeRectangle="667, 358, 86, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='logInModal' tag='LABEL' type='' class='form-control-label' aaname='Username:' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Username:' /&gt;" Guid="3d20e8e5-8a2d-4891-b881-b4be6cf8178f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="11f32527b0d9deb50ee45b7e63fe408a.png" xmlns="">0exGmHwd_8Ee0MUvmVsqqPg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

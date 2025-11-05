@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BAqcFoiiXUaiD1doLipjPw" Reference="VLyBuG8JQ0qruJW2fqyr9w/dodBh8bNgkaZL5t76pCWpw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="647, 263, 625, 494" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='modal-content' parentid='logInModal' tag='DIV' /&gt;" Guid="5d0da97d-cf99-4309-a82f-f6d6742d9225" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6f96c74de41a48a8a4552fbd1c5768a5.png" xmlns="">0ZsN6ofnDv0CI_rlN3Jva4g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

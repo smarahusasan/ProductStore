@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Welcome message",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "1FtltV-QKkWeuNNEqjU_TA",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/1FtltV-QKkWeuNNEqjU_TA",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
+  "Created": "2025-11-05T10:41:28.7837647Z",
+  "Updated": "2025-11-05T10:43:49.7936803Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

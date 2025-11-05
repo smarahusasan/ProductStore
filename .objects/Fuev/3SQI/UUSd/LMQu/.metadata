@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Log in button on PopUp",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "LMQuAL8GhUWwuSLnTV-GQQ",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/LMQuAL8GhUWwuSLnTV-GQQ",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
+  "Created": "2025-11-05T08:57:21.9458007Z",
+  "Updated": "2025-11-05T09:44:30.041544Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

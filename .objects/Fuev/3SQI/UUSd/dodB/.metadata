@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Login PopUp",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "dodBh8bNgkaZL5t76pCWpw",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/dodBh8bNgkaZL5t76pCWpw",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
+  "Created": "2025-11-05T09:36:28.2175195Z",
+  "Updated": "2025-11-05T09:43:36.6379628Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
