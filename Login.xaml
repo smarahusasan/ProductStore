@@ -116,25 +116,25 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Loginn" sap:VirtualizedContainerService.HintSize="862.8000000000001,3255.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Loginn" sap:VirtualizedContainerService.HintSize="815.6,2929.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="552,3232" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="726ffa7a-b78c-4d55-a595-9cf741951deb" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="552,2906.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="726ffa7a-b78c-4d55-a595-9cf741951deb" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,2992" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,2666.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="484.8,2930.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="484.8,2604.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,26 +156,27 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <uix:NCheckState DisplayName="Check if login popup appeared" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,718.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Timeout="3" Version="V5">
+              <uix:NCheckState DisplayName="Check if login popup appeared" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,313.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Timeout="3" Version="V5">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="PopUp appears" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="PopUp appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;PopUp appeared&quot;]" />
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="PopUp does not appear" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="PopUp does not appear" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Popup did not appear&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Popup did not appear&quot;]" />
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
@@ -226,7 +227,7 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DisplayName="Log in" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Version="V5">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DisplayName="Log in" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Version="V5">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="50f4c12f-d1d4-4194-ac78-e8fc8f47c5e4" ContentHash="br6nScRCAU-nwBZ0cWK-QQ" CvElementArea="1153, 688, 101, 52" CvTextArea="1175, 704, 56, 23" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="1156, 691, 96, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Log in' parentid='logInModal' tag='BUTTON' /&gt;" Guid="e89e221a-ed76-4518-9c83-9150602c91d2" InformativeScreenshot="a8e48cc1870f42807bf5ca1daae6b1dc.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/LMQuAL8GhUWwuSLnTV-GQQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                 </uix:NClick.Target>
@@ -241,28 +242,31 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <uix:NCheckState DisplayName="Check App State 'Log out'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,573.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Version="V5">
+              <uix:NCheckState DelayBefore="0" DisplayName="Log in succeded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,652.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="726ffa7a-b78c-4d55-a595-9cf741951deb" Timeout="5" Version="V5">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="449.6,227.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Logged in succesfully&quot;]" />
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Invalid credentials!&quot;]" />
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
-                  <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="f4b875b8-2348-43c0-a474-8518d64cf979" ContentHash="JWy8jA6RYkqb9Zldn9ifVg" DesignTimeRectangle="349, 234, 86, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='logout2' tag='A' /&gt;" Guid="53ff0822-744e-45ec-9938-9341fc249a00" InformativeScreenshot="fb3ef5a793b647943ddb9f6a2615b318.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/9xuhir5H8EW2QlR2kRNnDA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="647, 198, 625, 494" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='document' parentid='logInModal' tag='DIV' /&gt;" Guid="84561025-cae9-4a17-96b9-f46ede67ea0c" InformativeScreenshot="f9835d503192d6f9264003b480f04c0f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Sequence>
