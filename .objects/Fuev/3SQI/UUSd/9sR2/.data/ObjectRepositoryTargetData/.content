@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="NlmNad9sWkWUyVx4-nLmPQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="0WtdTknR1E-MB5ytAJ4iIQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="04409ef2-97c7-4e0f-8efd-d0009ce35be9" CvElementArea="1312, 373, 153, 51" CvTextArea="1332, 386, 111, 20" CvTextArgument="Place Order" CvType="Button" DesignTimeRectangle="1314, 375, 149, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-wrapper' tag='BUTTON' /&gt;" Guid="c792837a-156a-4356-952c-9a07c3d96732" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="b3dc76235de17e280093999b93c4bb4e.png" xmlns="">0AY9-cEmlBUeRKTomtveEVw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="fda94d91-de39-4f30-8ab6-f47d55ffc97d" CvElementArea="1310, 371, 153, 50" CvTextArea="1331, 385, 111, 20" CvTextArgument="Place Order" CvType="Button" DesignTimeRectangle="1312, 372, 149, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-wrapper' tag='BUTTON' /&gt;" Guid="45c2d69e-17c4-4655-990e-b6a26144ce02" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="260d1d74d2ca52c291b2e75796d5ffea.png" xmlns="">0oDyLGKe4gkCUDlTdtbco7Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

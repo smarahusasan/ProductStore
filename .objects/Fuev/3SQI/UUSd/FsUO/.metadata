@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Username field",
+  "Name": "Log out Label",
   "Type": "Element",
-  "TaxonomyType": "Input",
-  "Id": "3OrMS7-_5E2zT_geVubAzQ",
-  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/3OrMS7-_5E2zT_geVubAzQ",
+  "TaxonomyType": "Label",
+  "Id": "FsUOFvb2NEeRlwTUsX2aKg",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/FsUOFvb2NEeRlwTUsX2aKg",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
-  "Created": "2025-11-05T08:45:50.6731157Z",
-  "Updated": "2025-11-06T09:33:24.7624487Z",
+  "Created": "2025-11-06T09:28:35.6545609Z",
+  "Updated": "2025-11-06T09:28:49.4745492Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"

@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Log in button",
+  "Name": "Log in Label",
   "Type": "Element",
   "TaxonomyType": "Label",
   "Id": "RucBEAqLv0-oDh7Fdr9dhw",
   "Reference": "VLyBuG8JQ0qruJW2fqyr9w/RucBEAqLv0-oDh7Fdr9dhw",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
   "Created": "2025-11-05T08:39:43.0101108Z",
-  "Updated": "2025-11-05T11:09:47.8472394Z",
+  "Updated": "2025-11-06T09:30:04.9204621Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"

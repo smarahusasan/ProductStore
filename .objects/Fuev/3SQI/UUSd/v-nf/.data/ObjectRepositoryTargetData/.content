@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="MJ8KFQ2y802DqmtLCQvN2w" Reference="VLyBuG8JQ0qruJW2fqyr9w/v-nfuonrUk2FOAsmcfrQ2Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="Cgld-nevd0Kg3JuAzzH7-w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="45f138f8-9500-4109-b2d0-066008b87c1b" CvTextArea="1379, 195, 143, 20" CvTextArgument="Welcome smara" CvType="Text" DesignTimeRectangle="1372, 182, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="42e551d4-1293-40c4-9fe8-657ee4b694b0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="564d07faf170840e7613ec076dfd0cf5.png" xmlns="">0I2cArwJrJE6DcBi6lz0N2w</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="a5bce77d-fd25-44ad-91af-98d5b142bfe6" CvTextArea="1379, 192, 144, 21" CvTextArgument="Welcome smara" CvType="Text" DesignTimeRectangle="1373, 179, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="b2fce5cd-2653-4762-8c04-10c1d46ba5c3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="62d9f9b11b9007c68113592a18ee313c.png" xmlns="">0TSCM56cieUO6t1_MEdPeng</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

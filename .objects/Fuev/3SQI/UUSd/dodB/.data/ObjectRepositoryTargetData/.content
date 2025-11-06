@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="BAqcFoiiXUaiD1doLipjPw" Reference="VLyBuG8JQ0qruJW2fqyr9w/dodBh8bNgkaZL5t76pCWpw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="PVBluPmKK06SQP8FqgBkmg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="647, 263, 625, 494" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='modal-content' parentid='logInModal' tag='DIV' /&gt;" Guid="5d0da97d-cf99-4309-a82f-f6d6742d9225" ScopeSelectorArgument="&lt;html app='chrome.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="6f96c74de41a48a8a4552fbd1c5768a5.png" xmlns="">0ZsN6ofnDv0CI_rlN3Jva4g</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="647, 195, 625, 494" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='modal-content' parentid='logInModal' tag='DIV' /&gt;" Guid="6f282d69-1914-4393-a7d9-d8c59d7aeb5e" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9bf1be3f1e7a018291ae168bc8de7948.png" xmlns="">030Vyqudpt0WTRE-EDdA0uQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

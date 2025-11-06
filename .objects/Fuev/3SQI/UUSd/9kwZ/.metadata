@@ -1,14 +1,17 @@
 ﻿{
-  "Name": "Cart",
+  "Name": "Cart Label",
   "Type": "Element",
   "TaxonomyType": "Label",
   "Id": "9kwZiK8QDE28GyLXAcsNVw",
   "Reference": "VLyBuG8JQ0qruJW2fqyr9w/9kwZiK8QDE28GyLXAcsNVw",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
   "Created": "2025-11-05T21:04:35.5477115Z",
-  "Updated": "2025-11-05T21:04:35.5477115Z",
+  "Updated": "2025-11-06T09:23:13.4166615Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
   ]
 }

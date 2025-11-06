@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Log out button",
+  "Name": "Welcome label",
   "Type": "Element",
   "TaxonomyType": "Label",
   "Id": "v-nfuonrUk2FOAsmcfrQ2Q",
   "Reference": "VLyBuG8JQ0qruJW2fqyr9w/v-nfuonrUk2FOAsmcfrQ2Q",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
   "Created": "2025-11-05T09:49:24.974278Z",
-  "Updated": "2025-11-05T09:49:38.8502185Z",
+  "Updated": "2025-11-06T09:27:04.6467039Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
