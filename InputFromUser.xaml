@@ -99,19 +99,9 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InputFromUser" sap:VirtualizedContainerService.HintSize="1047.6000000000001,2211.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InputFromUser" sap:VirtualizedContainerService.HintSize="1006,2438.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="isMaxNumeric">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
       <Variable x:TypeArguments="x:String" Name="maxPriceInput" />
-      <Variable x:TypeArguments="x:Boolean" Name="isMinNumeric">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
       <Variable x:TypeArguments="x:String" Name="minPriceInput" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -124,9 +114,9 @@
         <OutArgument x:TypeArguments="x:String">[out_brand]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not isMinNumeric]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486.4,961.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486.4,988" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,831.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,857.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,15 +127,7 @@
               <OutArgument x:TypeArguments="x:String">[minPriceInput]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:Boolean">[isMinNumeric]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:Boolean">[Double.TryParse(minPriceInput,out_minPrice)]</InArgument>
-            </Assign.Value>
-          </Assign>
-          <If Condition="[Not isMinNumeric]" sap:VirtualizedContainerService.HintSize="451.2,323.2" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[Not Double.TryParse(minPriceInput,out_minPrice)]" sap:VirtualizedContainerService.HintSize="451.2,524" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence DisplayName="Invalid value" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
@@ -157,22 +139,33 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Numeric value" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Numeric value" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Double">[out_minPrice]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(minPriceInput)]</InArgument>
+                  </Assign.Value>
+                </Assign>
               </Sequence>
             </If.Else>
           </If>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
+      <ui:InterruptibleDoWhile.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not Double.TryParse(minPriceInput,out_minPrice)" />
+      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not isMaxNumeric]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486.4,952.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486.4,988" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,831.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,857.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -183,15 +176,7 @@
               <OutArgument x:TypeArguments="x:String">[maxPriceInput]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:Boolean">[isMaxNumeric]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:Boolean">[Double.TryParse(maxPriceInput,out_maxPrice)]</InArgument>
-            </Assign.Value>
-          </Assign>
-          <If Condition="[Not isMaxNumeric]" sap:VirtualizedContainerService.HintSize="451.2,323.2" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[Not Double.TryParse(maxPriceInput,out_maxPrice)]" sap:VirtualizedContainerService.HintSize="451.2,524" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Sequence DisplayName="Invalid value" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
@@ -203,18 +188,30 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Numeric value" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence DisplayName="Numeric value" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Double">[out_maxPrice]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(maxPriceInput)]</InArgument>
+                  </Assign.Value>
+                </Assign>
               </Sequence>
             </If.Else>
           </If>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
+      <ui:InterruptibleDoWhile.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not Double.TryParse(maxPriceInput,out_maxPrice)" />
+      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Min value: &quot;+out_minPrice.ToString+&quot;, Max: &quot;+out_maxPrice.ToString]" />
   </Sequence>
 </Activity>

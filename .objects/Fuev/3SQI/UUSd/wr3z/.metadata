@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Delete item",
+  "Name": "Home label",
   "Type": "Element",
   "TaxonomyType": "Label",
-  "Id": "6VH6R4TDZke_-YiEtOncOQ",
-  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/6VH6R4TDZke_-YiEtOncOQ",
+  "Id": "wr3zPlYBwkGXwv5qUdeLLA",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/wr3zPlYBwkGXwv5qUdeLLA",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
-  "Created": "2025-11-06T10:03:48.4989226Z",
-  "Updated": "2025-11-11T23:04:35.0738904Z",
+  "Created": "2025-11-11T22:49:16.9532829Z",
+  "Updated": "2025-11-11T22:49:38.1188418Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"

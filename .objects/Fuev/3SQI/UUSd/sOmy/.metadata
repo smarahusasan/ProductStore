@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Delete item",
+  "Name": "Product added message box",
   "Type": "Element",
-  "TaxonomyType": "Label",
-  "Id": "6VH6R4TDZke_-YiEtOncOQ",
-  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/6VH6R4TDZke_-YiEtOncOQ",
+  "TaxonomyType": "Element",
+  "Id": "sOmypT9P_EOwPN4F5f18jA",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/sOmypT9P_EOwPN4F5f18jA",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
-  "Created": "2025-11-06T10:03:48.4989226Z",
-  "Updated": "2025-11-11T23:04:35.0738904Z",
+  "Created": "2025-11-11T23:03:12.0695146Z",
+  "Updated": "2025-11-11T23:03:51.0311258Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
