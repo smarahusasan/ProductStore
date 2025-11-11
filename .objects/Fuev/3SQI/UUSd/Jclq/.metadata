@@ -1,12 +1,12 @@
 ﻿{
-  "Name": "Products in cart",
+  "Name": "Products",
   "Type": "Element",
   "TaxonomyType": "Element",
-  "Id": "hqYgkrK4oEGuHvUEw6R7dQ",
-  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/hqYgkrK4oEGuHvUEw6R7dQ",
+  "Id": "JclqkhJXqk-IoIq0lya9Qg",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/JclqkhJXqk-IoIq0lya9Qg",
   "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
-  "Created": "2025-11-06T09:58:05.8903291Z",
-  "Updated": "2025-11-11T10:43:32.1715265Z",
+  "Created": "2025-11-11T10:33:13.4955509Z",
+  "Updated": "2025-11-11T10:44:18.047578Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
     "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
