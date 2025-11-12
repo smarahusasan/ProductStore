@@ -120,7 +120,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ValidateItem" sap:VirtualizedContainerService.HintSize="634.8000000000001,1473.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ValidateItem" sap:VirtualizedContainerService.HintSize="677.2,1473.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -184,19 +184,19 @@
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="fda94d91-de39-4f30-8ab6-f47d55ffc97d" ContentHash="0WtdTknR1E-MB5ytAJ4iIQ" CvElementArea="1310, 371, 153, 50" CvTextArea="1331, 385, 111, 20" CvTextArgument="Place Order" CvType="Button" DesignTimeRectangle="1312, 372, 149, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-wrapper' tag='BUTTON' /&gt;" Guid="45c2d69e-17c4-4655-990e-b6a26144ce02" InformativeScreenshot="260d1d74d2ca52c291b2e75796d5ffea.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/9sR2_fnl8ESmOR0Lr7Pv-A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NGetText DisplayName="Get Text 'Samsung galaxy s7'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartName]" Version="V5">
+            <uix:NGetText DisplayName="Get product name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartName]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="xKMz2YsalES3IVtVAYBhzA" DesignTimeRectangle="171, 327, 593, 156" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" Guid="1aa11c58-f521-426c-83e4-874a64016224" InformativeScreenshot="eff8e2cb690995c1a73a0b729c40d3ba.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/sXI1ZDofBE6UVJxs9g1FbQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text '800'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartPrice]" Version="V5">
+            <uix:NGetText DisplayName="Get product price" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartPrice]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="BzBYCqv_J0Kd6pzpV8073g" DesignTimeRectangle="764, 327, 233, 156" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='3' tableRow='2' tag='TD' /&gt;" Guid="9ea893c0-256a-41ff-a9a3-2a6bc782d3ef" InformativeScreenshot="37ae6081d42aa9bd94e328c4d8eaef29.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/zny41GCtCUa1HvDBiPLGXQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
             <If Condition="[in_name.Equals(itemInCartName) And in_price.ToString.Equals(itemInCartPrice)]" sap:VirtualizedContainerService.HintSize="451.2,324.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Is valid" sap:VirtualizedContainerService.HintSize="449.6,168.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
