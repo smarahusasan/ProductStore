@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TD34GPserEGabuwHO_r_3g" Reference="VLyBuG8JQ0qruJW2fqyr9w/_4LUbX1HYUGKzkbStu5joA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="1481fd93-c249-48ce-8408-273e60bea99b" CvTextArea="1064, 192, 56, 20" CvTextArgument="Home" CvType="Text" DesignTimeRectangle="1056, 179, 73, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='navbarExample' tag='A' /&gt;" Guid="86406432-e80a-42d6-ac49-4c0ee6948773" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8d5ecd1fa54558cfe06c6ff2d4e58965.png" xmlns="">0c-5YsCTgJEKiFfPhh7e1Mw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

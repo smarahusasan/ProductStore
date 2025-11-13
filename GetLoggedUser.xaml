@@ -112,7 +112,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetLoggedUser" sap:VirtualizedContainerService.HintSize="677.2,2092.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetLoggedUser" sap:VirtualizedContainerService.HintSize="677.2,2212" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="message" />
     </Sequence.Variables>
@@ -121,13 +121,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,2069.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="126c2e5f-d36b-4b6d-8098-b5a110099dc0" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,2188.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="126c2e5f-d36b-4b6d-8098-b5a110099dc0" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,1876" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,1995.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,9 +141,9 @@
                 <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NCheckState DisplayName="Check if element exists" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="521.6,1641.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="126c2e5f-d36b-4b6d-8098-b5a110099dc0" Timeout="2" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="If the element exists then a user is already logged in" DisplayName="Check if element exists" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="521.6,1760.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="126c2e5f-d36b-4b6d-8098-b5a110099dc0" Timeout="5" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Element found" sap:VirtualizedContainerService.HintSize="520,1332" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Element found" sap:VirtualizedContainerService.HintSize="520,1420" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,9 +163,9 @@
                       <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="a5bce77d-fd25-44ad-91af-98d5b142bfe6" ContentHash="ADnWywsJN0q33PrvP_nL9A" CvType="AnyWordGroup" DesignTimeRectangle="1373, 179, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="d831d1a2-1242-4b4c-b284-a5655a73f5fb" InformativeScreenshot="62d9f9b11b9007c68113592a18ee313c.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/1FtltV-QKkWeuNNEqjU_TA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <If Condition="[message.Contains(&quot;Welcome&quot;)]" DisplayName="If it's a welcome message" sap:VirtualizedContainerService.HintSize="486.4,1072.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[message.Contains(&quot;Welcome&quot;)]" DisplayName="If it's a welcome message" sap:VirtualizedContainerService.HintSize="486.4,1160.8" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence DisplayName="A user is logged in" sap:VirtualizedContainerService.HintSize="484.8,835.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="A user is logged in" sap:VirtualizedContainerService.HintSize="484.8,923.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -179,7 +179,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <If Condition="[message.Split(&quot; &quot;)(1).Equals(in_expectedUser)]" DisplayName="Check username" sap:VirtualizedContainerService.HintSize="451.2,718.4" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If Condition="[message.Split(&quot; &quot;)(1).Equals(in_expectedUser)]" DisplayName="Check username" sap:VirtualizedContainerService.HintSize="451.2,806.4" sap2010:WorkflowViewState.IdRef="If_2">
                           <If.Then>
                             <Sequence DisplayName="Is expected user" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                               <sap:WorkflowViewStateService.ViewState>
@@ -198,12 +198,21 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Not expected user" sap:VirtualizedContainerService.HintSize="449.6,363.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence sap2010:Annotation.AnnotationText="The user is not the expected one so a log out is executed" DisplayName="Not expected user" sap:VirtualizedContainerService.HintSize="449.6,451.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Logging out&quot;]">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:LogMessage>
                               <uix:NClick ActivateBefore="True" AlterIfDisabled="False" ClickType="Single" DelayAfter="1" DelayBefore="0" DisplayName="Log out" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,303.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="126c2e5f-d36b-4b6d-8098-b5a110099dc0" Version="V5">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="cc82878b-8b9d-49e4-b4b4-0b46f6864a5d" ContentHash="lySJ-lWCf0iwoxVdoWTb8w" CvTextArea="1295, 192, 70, 23" CvTextArgument="Log out" CvType="Text" DesignTimeRectangle="1287, 179, 86, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='logout2' tag='A' /&gt;" Guid="265733ee-0bb7-4808-b578-7c77b2bcf7af" InformativeScreenshot="8407c2429aea7a463277e916da3d1af6.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/FsUOFvb2NEeRlwTUsX2aKg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
@@ -257,6 +266,11 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="a5bce77d-fd25-44ad-91af-98d5b142bfe6" ContentHash="Cgld-nevd0Kg3JuAzzH7-w" CvTextArea="1379, 192, 144, 21" CvTextArgument="Welcome smara" CvType="Text" DesignTimeRectangle="1373, 179, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="b2fce5cd-2653-4762-8c04-10c1d46ba5c3" InformativeScreenshot="62d9f9b11b9007c68113592a18ee313c.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/v-nfuonrUk2FOAsmcfrQ2Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
           </Sequence>
         </ActivityAction>

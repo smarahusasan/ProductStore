@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Item added",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "1QZKaSndwk-zFGvVpd5q8A",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/1QZKaSndwk-zFGvVpd5q8A",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g",
+  "Created": "2025-11-13T22:34:20.9616486Z",
+  "Updated": "2025-11-13T22:34:34.1623484Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

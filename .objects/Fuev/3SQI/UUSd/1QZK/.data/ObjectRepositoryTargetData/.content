@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Jc9NfsuZtEm30lcjJ0e5Nw" Reference="VLyBuG8JQ0qruJW2fqyr9w/i0JLVI9FDEmNJVPBsqeJsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="JPxwC1vcekyyCmDEVSf6xw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="689, 97, 560, 157" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='www.demoblaze.com says' role='dialog' /&gt;" Guid="977a9363-7166-4a25-a4ec-1755b84f502c" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='STORE - Profile 1 - Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="a52baaa842f55c5d31756ee47ad96c51.png" xmlns="">0FX0aA3giDUa2QgYHUwuifw</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="a52baaa842f55c5d31756ee47ad96c51.png" xmlns="">0YXWjhuEuukq2lhhls4ioKw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>
