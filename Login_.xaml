@@ -192,7 +192,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Text="[in_username]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Text="[in_username]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="613fd163-695f-47dc-ae8b-82cb61673c24" ContentHash="16T86wb05Uu6i-PDndMtZQ" CvElementArea="665, 344, 587, 51" CvType="InputBox" DesignTimeRectangle="667, 346, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='loginusername' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="77cf1b3e-9b92-475b-a5a4-57f7f2a5d3ab" InformativeScreenshot="2c9b6ea0eedff330436d5cd8abe4af72.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/3OrMS7-_5E2zT_geVubAzQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -221,7 +221,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.Single]" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Private: Type password" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Text="[in_password]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Private: Type password" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Text="[in_password]" Version="V5">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="32fb11fd-ce91-44b8-ab96-564872cdf373" ContentHash="xntgSszeIk2zIx06mVENXQ" CvElementArea="665, 468, 587, 50" CvType="InputBox" DesignTimeRectangle="667, 470, 585, 47" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='loginpassword' tag='INPUT' type='password' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="2e9d499c-6ad1-4e95-ae6e-53af01f6b4bc" InformativeScreenshot="e07ab2222cdc78a0aa2558acf468586e.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/Rfesqbksc0-IBxWa3s5qkA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -257,7 +257,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DelayBefore="0" DisplayName="Login succeeded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,483.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Timeout="2" Version="V5">
+            <uix:NCheckState DelayBefore="0" DisplayName="Login succeeded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,483.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Timeout="5" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -266,7 +266,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[new Exception(&quot;Invalid credentials!&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw Exception="[new BusinessRuleException(&quot;Invalid credentials!&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>

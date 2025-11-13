@@ -1,5 +1,16 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ExtractProductsFilter" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_brand" Type="InArgument(x:String)" />
+    <x:Property Name="in_maxPrice" Type="InArgument(x:Double)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="in_minPrice" Type="InArgument(x:Double)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
     <x:Property Name="out_bestRow" Type="OutArgument(sd:DataRow)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
@@ -49,6 +60,7 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -113,25 +125,22 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractProductsFilter" sap:VirtualizedContainerService.HintSize="677.2,2977.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractProductsFilter" sap:VirtualizedContainerService.HintSize="677.2,2801.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,2954.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="d4a67098-19cf-412c-bbc5-ac59da5806af" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556.8,2778.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="d4a67098-19cf-412c-bbc5-ac59da5806af" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,2760.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,2584.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Double" Default="-1" Name="maxPriceFromFiltered" />
-              <Variable x:TypeArguments="x:Double" Name="minPrice" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_products" />
-              <Variable x:TypeArguments="x:String" Name="brand" />
-              <Variable x:TypeArguments="x:Double" Name="maxPrice" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -158,14 +167,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get filters" sap:VirtualizedContainerService.HintSize="521.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="InputFromUser.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_brand">[brand]</OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_minPrice">[minPrice]</OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_maxPrice">[maxPrice]</OutArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Brand: &quot;+brand.ToString+&quot;, min: &quot;+minPrice.ToString+&quot;, max: &quot;+maxPrice.ToString]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Brand: &quot;+in_brand.ToString+&quot;, min: &quot;+in_minPrice.ToString+&quot;, max: &quot;+in_maxPrice.ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -217,7 +219,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <If Condition="[CurrentRow(&quot;Name&quot;).ToString.ToLower.StartsWith(brand.ToLower) And Convert.ToDouble(CurrentRow(&quot;Price&quot;))&gt;=minPrice And Convert.ToDouble(CurrentRow(&quot;Price&quot;))&lt;=maxPrice]" sap:VirtualizedContainerService.HintSize="486.4,988.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[CurrentRow(&quot;Name&quot;).ToString.ToLower.StartsWith(in_brand.ToLower) And Convert.ToDouble(CurrentRow(&quot;Price&quot;))&gt;=in_minPrice And Convert.ToDouble(CurrentRow(&quot;Price&quot;))&lt;=in_maxPrice]" sap:VirtualizedContainerService.HintSize="486.4,988.8" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence DisplayName="Matches filters" sap:VirtualizedContainerService.HintSize="484.8,834.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
@@ -288,7 +290,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[new Exception(&quot;No product matches the filters&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw Exception="[new BusinessRuleException(&quot;No product matches the filters&quot;)]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </If.Then>
               <If.Else>
