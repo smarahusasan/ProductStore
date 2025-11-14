@@ -108,7 +108,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="677.2,3636.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="674.8000000000001,3475.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Double" Default="400" Name="maxPrice" />
       <Variable x:TypeArguments="x:Double" Default="10" Name="minPrice" />
@@ -131,24 +131,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="488,359.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,248.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" sap2010:Annotation.AnnotationText="Kill all Microsoft Edge processes" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,188.8" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="msedge">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:KillProcess>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" sap2010:Annotation.AnnotationText="Kill all Microsoft Edge processes" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="488,197.6" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="msedge">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:KillProcess>
     <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="False" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,3197.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="255a36db-23b0-4209-b2d0-ee8c99bda3aa" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
