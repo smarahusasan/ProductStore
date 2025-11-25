@@ -108,7 +108,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="730.8000000000001,3088.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="472.40000000000003,3088.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="/index.html" Name="indexUrl" />
       <Variable x:TypeArguments="x:String" Default="/cart.html" Name="cartUrl" />
@@ -267,7 +267,7 @@
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Validate the item in cart" sap:VirtualizedContainerService.HintSize="449.6,148.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Validate\ValidateItem.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_name">[bestRow("Name").ToString]</InArgument>
-            <InArgument x:TypeArguments="x:Double" x:Key="in_price">[Convert.ToDouble(bestRow("Price"))]</InArgument>
+            <InArgument x:TypeArguments="x:Double" x:Key="in_price">[Convert.ToDouble(bestRow("Price").ToString.Replace("$","").Trim)]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[cartUrl]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
