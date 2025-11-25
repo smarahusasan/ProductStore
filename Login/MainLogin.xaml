@@ -126,20 +126,20 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="851.6,1236.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="730.8000000000001,1266.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;MainLogin start&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,873.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,903.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="d3a231fc-50c1-474b-b9c5-59993f42d6b7" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,671.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,700.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
             </Sequence.Variables>
@@ -148,7 +148,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLoggedUser - Invoke Workflow File (Login\GetLoggedUser.xaml)" sap:VirtualizedContainerService.HintSize="451.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login\GetLoggedUser.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLoggedUser - Invoke Workflow File (Login\GetLoggedUser.xaml)" sap:VirtualizedContainerService.HintSize="451.2,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login\GetLoggedUser.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_url">[in_url]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
@@ -156,9 +156,9 @@
                 <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[in_customUrl]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <If Condition="[Not isLoggedIn]" sap:VirtualizedContainerService.HintSize="451.2,435.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Not isLoggedIn]" sap:VirtualizedContainerService.HintSize="451.2,452" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Not logged in" sap:VirtualizedContainerService.HintSize="449.6,258.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Not logged in" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,7 +166,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BasicLogin - Invoke Workflow File (Login\BasicLogin.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BasicLogin - Invoke Workflow File (Login\BasicLogin.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_url">[in_url]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>

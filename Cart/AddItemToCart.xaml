@@ -124,7 +124,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddItemToCart" sap:VirtualizedContainerService.HintSize="851.6,2582.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddItemToCart" sap:VirtualizedContainerService.HintSize="730.8000000000001,2142.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="name" />
     </Sequence.Variables>
@@ -133,20 +133,27 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;AddItemToCart start&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2219.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;AddItemToCart start&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2014.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,2016.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1812" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Get product name" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Get product name" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </Assign.To>
@@ -154,32 +161,22 @@
                 <InArgument x:TypeArguments="x:String">[in_bestRow("Name").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CATEGORIES'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CATEGORIES'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="9c7ffb2d-3ed2-4f3f-b5ec-7f2710c9b486" ContentHash="AATsVJHhx02jlirHWJhTVQ" DesignTimeRectangle="266, 418, 319, 79" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cat' tag='A' /&gt;" Guid="1dae5a16-60ba-4be6-a49c-58975360e613" InformativeScreenshot="c74cc8496fe4b6d09ea7064296d97f9c.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/kG2M-IUaGEKFzgKr-5C3ow" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Find element by the aaname property" ClickType="Single" DelayAfter="0" DelayBefore="1" DisplayName="Click by aaname" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,343.2" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
+            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Find element by the aaname property" ClickType="Single" DelayAfter="0" DelayBefore="1" DisplayName="Click by aaname" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,228.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" ContentHash="SiupyIO1-Uuc9Vi_V3QfSQ" DesignTimeRectangle="648, 461, 232, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' class='hrefch' parentid='tbodyid' tag='A' /&gt;&quot;, name)]" FuzzyAccuracy="1" Guid="77616c15-434a-4d3f-bf1e-91a56a3e750c" InformativeScreenshot="e869a4706bb8c6a6f5697492845eb485.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/FHKrqtPf3kypbxCylqhPXg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="Wait for the product's page to load" DelayBefore="0" DisplayName="Check App State 'Add to cart'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,374.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Timeout="2" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Wait for the product's page to load" DelayBefore="0" DisplayName="Check App State 'Add to cart'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,378.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Timeout="2" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -209,22 +206,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Add item to cart" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,312" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Add item to cart" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/prod.html" ContentHash="np-hd4xW1EWJMWL3J7CjdQ" DesignTimeRectangle="805, 618, 185, 64" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='tbodyid' tag='A' /&gt;" Guid="ec2abd18-41da-4f9d-a06d-84e10c788b1e" InformativeScreenshot="cadfa9374bd8d17b9f0b94da52dc540f.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/ua49m69M2kuJ5lpvm1AivQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="If the 'Item added' alert appears" DelayBefore="0" DisplayName="Check if item added" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,374.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Timeout="1" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="If the 'Item added' alert appears" DelayBefore="0" DisplayName="Check if item added" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,378.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Timeout="1" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -254,7 +241,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,184.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,188.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1557469e-08e6-4de9-9c8a-7e90f265c4d6" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/prod.html" CVScreenId="bdc45030-c2f4-41a3-95d0-b928dc9a7365" ContentHash="7TWLU618hEeJOLFQQx1fkA" DesignTimeRectangle="1149, 194, 80, 40" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='www.demoblaze.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" Guid="bd9dcd00-6c3e-4dc1-a551-d1de789ac3d5" InformativeScreenshot="d014a2815be409ec5a72f467d51c9a42.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/Zs1l6019h0ago4taS_dKVA" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='STORE - Profile 1 - Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
@@ -280,6 +267,13 @@
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddItemToCart end&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddItemToCart end&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
