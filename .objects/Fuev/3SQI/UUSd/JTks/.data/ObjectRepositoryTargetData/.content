@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3HIa8sGyp0aN0z2lRAOElg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" DesignTimeRectangle="1300, 267, 123, 39" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='totalp' matching:id='fuzzy' fuzzylevel:id='0.0' check:innerText='4550' /&gt;" Guid="f5cec0e1-d81c-41c7-94fa-9f7b02dbe6ab" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" CvTextArea="1297, 216, 86, 35" CvTextArgument="Total" CvType="Text" DesignTimeRectangle="1300, 214, 123, 44" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Total' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Total' /&gt;" Guid="e626083b-f454-4800-abd6-787bc049cf83" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4a13a4204391867c616d939d734e7d17.png" xmlns="">0D4h5pHeCdU2bwkr4RHTO7w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
