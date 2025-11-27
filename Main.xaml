@@ -108,17 +108,17 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="472.40000000000003,3088.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="718,3028" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="/index.html" Name="indexUrl" />
+      <Variable x:TypeArguments="x:String" Default="/index.html" Name="mainUrl" />
       <Variable x:TypeArguments="x:String" Default="/cart.html" Name="cartUrl" />
-      <Variable x:TypeArguments="x:String" Default="https://www.demoblaze.com" Name="url" />
+      <Variable x:TypeArguments="x:String" Default="https://www.demoblaze.com" Name="baseUrl" />
       <Variable x:TypeArguments="x:String" Name="password" />
       <Variable x:TypeArguments="x:String" Name="username" />
       <Variable x:TypeArguments="x:Double" Default="400" Name="maxPrice" />
       <Variable x:TypeArguments="x:Double" Default="10" Name="minPrice" />
       <Variable x:TypeArguments="x:String" Default="samsung" Name="brand" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_filtered" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_filteredProducts" />
       <Variable x:TypeArguments="sd:DataRow" Name="bestRow" />
       <Variable x:TypeArguments="x:String" Default="msedge" Name="processName" />
       <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
@@ -147,30 +147,22 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_password">[password]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,772" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,711.2" sap2010:WorkflowViewState.IdRef="TryCatch_9">
       <TryCatch.Try>
-        <Sequence DisplayName="Not logged in or incorrect user" sap:VirtualizedContainerService.HintSize="449.6,300.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence DisplayName="Not logged in or incorrect user" sap:VirtualizedContainerService.HintSize="449.6,240" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="Login" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Login\MainLogin.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="Login" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Login\MainLogin.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_password">[password]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_username">[username]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[indexUrl]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Logged in successfully&quot;]">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:LogMessage>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -206,8 +198,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verify if cart is empty" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Cart\VerifyCart.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[cartUrl]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_cartUrl">[cartUrl]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,642.4" sap2010:WorkflowViewState.IdRef="TryCatch_7">
@@ -218,9 +211,9 @@
             <InArgument x:TypeArguments="x:Double" x:Key="in_maxPrice">[maxPrice]</InArgument>
             <InArgument x:TypeArguments="x:Double" x:Key="in_minPrice">[minPrice]</InArgument>
             <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_bestRow">[bestRow]</OutArgument>
-            <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_filtered">[dt_filtered]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[indexUrl]</InArgument>
+            <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_filteredProducts">[dt_filteredProducts]</OutArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
@@ -256,10 +249,9 @@
     </TryCatch>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add item to cart" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Cart\AddItemToCart.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Products">[dt_filtered]</InArgument>
         <InArgument x:TypeArguments="sd:DataRow" x:Key="in_bestRow">[bestRow]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[indexUrl]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,642.4" sap2010:WorkflowViewState.IdRef="TryCatch_8">
@@ -268,8 +260,9 @@
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_name">[bestRow("Name").ToString]</InArgument>
             <InArgument x:TypeArguments="x:Double" x:Key="in_price">[Convert.ToDouble(bestRow("Price").ToString.Replace("$","").Trim)]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_url">[url]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_customUrl">[cartUrl]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_cartUrl">[cartUrl]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>

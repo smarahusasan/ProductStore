@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="ADnWywsJN0q33PrvP_nL9A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="UbwFDyCwXE-B8uSYxFlYlw" Reference="VLyBuG8JQ0qruJW2fqyr9w/1FtltV-QKkWeuNNEqjU_TA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="a5bce77d-fd25-44ad-91af-98d5b142bfe6" CvType="AnyWordGroup" DesignTimeRectangle="1373, 179, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="d831d1a2-1242-4b4c-b284-a5655a73f5fb" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="62d9f9b11b9007c68113592a18ee313c.png" xmlns="">01opyZLlwyUqqS5oejXHKYA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" CVScreenId="a5bce77d-fd25-44ad-91af-98d5b142bfe6" CvType="AnyWordGroup" DesignTimeRectangle="1373, 179, 160, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nameofuser' tag='A' /&gt;" Guid="d831d1a2-1242-4b4c-b284-a5655a73f5fb" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="62d9f9b11b9007c68113592a18ee313c.png" xmlns="">0Jsn4DwyfCUGqN2NOb3u_zw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>

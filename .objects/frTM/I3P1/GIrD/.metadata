@@ -1,0 +1,13 @@
+﻿{
+  "Name": "STORE",
+  "Type": "Screen",
+  "Id": "GIrDTY5lmkqpB9NrBRjseg",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/GIrDTY5lmkqpB9NrBRjseg",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/I3P1DoIrE02lN9WIwTg20A",
+  "Created": "2025-11-27T19:00:58.9546537Z",
+  "Updated": "2025-11-27T19:00:58.9546537Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

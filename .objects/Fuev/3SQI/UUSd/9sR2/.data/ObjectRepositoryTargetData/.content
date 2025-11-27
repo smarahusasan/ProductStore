@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="UYSyOzv8YUeZ0U29uvhoXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="PzIrxIjdIUqvoezTUpyklw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="f9d34fc5-76a3-4400-b9cf-4dea7b089a74" DesignTimeRectangle="1300, 316, 148, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='page-wrapper' tag='BUTTON' /&gt;" Guid="acf1a5af-88b0-4985-9df8-22e92142421f" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="de166d2ec686fa542c71f624899d40f4.png" xmlns="">08IiXjwtauUqbcm4TKaakxQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" DesignTimeRectangle="1300, 267, 123, 39" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='totalp' matching:id='fuzzy' fuzzylevel:id='0.0' check:innerText='4550' /&gt;" Guid="f5cec0e1-d81c-41c7-94fa-9f7b02dbe6ab" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" CvTextArea="1297, 216, 86, 35" CvTextArgument="Total" CvType="Text" DesignTimeRectangle="1300, 214, 123, 44" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Total' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Total' /&gt;" Guid="e626083b-f454-4800-abd6-787bc049cf83" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4a13a4204391867c616d939d734e7d17.png" xmlns="">0w9GRY8RiBk6fO-TJEv5h7Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>
