@@ -126,7 +126,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="718,1000.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="777.2,810.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
     </Sequence.Variables>
@@ -135,37 +135,53 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;MainLogin start&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLoggedUser - Invoke Workflow File (Login\GetLoggedUser.xaml)" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Login\GetLoggedUser.xaml">
+    <ui:LogMessage DisplayName="Workflow start" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;MainLogin start&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Checks if the correct user is already logged in. If not then perform log out." DisplayName="Get the logged user if exits" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Login\GetLoggedUser.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_isLoggedIn">[isLoggedIn]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
     <If Condition="[Not isLoggedIn]" sap:VirtualizedContainerService.HintSize="451.2,456.8" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Not logged in" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Not logged in" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BasicLogin - Invoke Workflow File (Login\BasicLogin.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Simple log in using given credentials" DisplayName="Basic login" sap:VirtualizedContainerService.HintSize="416,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
         </Sequence>
       </If.Then>
       <If.Else>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;User already logged in&quot;]">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;User already logged in&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -175,6 +191,13 @@
         </ui:LogMessage>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;MainLogin end&quot;]" />
+    <ui:LogMessage DisplayName="Workflow end" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;MainLogin end&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

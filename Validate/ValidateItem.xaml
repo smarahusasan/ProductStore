@@ -131,20 +131,20 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ValidateItem" sap:VirtualizedContainerService.HintSize="873.2,3385.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ValidateItem" sap:VirtualizedContainerService.HintSize="775.6,2309.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="555.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;ValidateItem start&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="555.2,3022.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Workflow start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;ValidateItem start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1946.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="553.6,2820" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1744" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="itemInCartName" />
               <Variable x:TypeArguments="x:String" Name="itemInCartPrice" />
@@ -154,98 +154,67 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="520,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Url="[in_baseUrl+in_cartUrl]" Version="V5" />
-            <uix:NCheckState DisplayName="Check App State 'Delete item'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,347.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Timeout="2" Version="V5">
+            <uix:NGoToUrl DisplayName="Navigate to cart" sap:VirtualizedContainerService.HintSize="451.2,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Url="[in_baseUrl+in_cartUrl]" Version="V5" />
+            <uix:NCheckState DisplayName="Check if 'Delete' button is found" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,590.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Timeout="2" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Element found&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Element found&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,176.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Element not found&quot;]" />
-                  <Throw Exception="[new Exception(&quot;No item found in cart!&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;Element not found&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <Throw Exception="[new System.Exception(&quot;No item found in cart!&quot;)]" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Throw_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="3e051f26-da0d-4eed-8ebb-41a4b3d9b496" ContentHash="qWNYIj8zgUe3IiyKJyhl5w" DesignTimeRectangle="1003, 347, 54, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' aaname='Delete' /&gt;" Guid="9cbc5261-9407-4fb6-8224-5b14682982d7" InformativeScreenshot="3ade31e4bb4d70508ca48c26d419a243.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/6VH6R4TDZke_-YiEtOncOQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,1084" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484.8,969.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState sap2010:Annotation.AnnotationText="Wait for the cart page to load" DelayBefore="0" DisplayName="Check App State 'Place Order'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,909.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" Timeout="2" Version="V5">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,233.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Element found&quot;]" />
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,360" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Element not found&quot;]" />
-                        <Throw Exception="[new Exception(&quot;No item found in cart!&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" ContentHash="3HIa8sGyp0aN0z2lRAOElg" DesignTimeRectangle="1300, 267, 123, 39" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='totalp' matching:id='fuzzy' fuzzylevel:id='0.0' check:innerText='4550' /&gt;" Guid="f5cec0e1-d81c-41c7-94fa-9f7b02dbe6ab" InformativeScreenshot="4a13a4204391867c616d939d734e7d17.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/JTksgrtBJEylaH_tBMbCHw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="826ba230-3c3a-452f-88ba-a65c9ac84d01" CvTextArea="1297, 216, 86, 35" CvTextArgument="Total" CvType="Text" DesignTimeRectangle="1300, 214, 123, 44" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Total' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Total' /&gt;" Guid="e626083b-f454-4800-abd6-787bc049cf83" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NCheckState.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NCheckState>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <uix:NGetText DelayAfter="0" DisplayName="Get product name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,146.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartName]" Version="V5">
+            <uix:NGetText DelayAfter="0" DisplayName="Get product's name" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,146.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartName]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="xKMz2YsalES3IVtVAYBhzA" DesignTimeRectangle="171, 327, 593, 156" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" Guid="1aa11c58-f521-426c-83e4-874a64016224" InformativeScreenshot="eff8e2cb690995c1a73a0b729c40d3ba.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/sXI1ZDofBE6UVJxs9g1FbQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <uix:NGetText DelayAfter="0" DisplayName="Get product price" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="520,146.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartPrice]" Version="V5">
+            <uix:NGetText DelayAfter="0" DisplayName="Get product's price" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,146.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="52e36ce5-d1c7-45e1-8923-08b18ab48b31" TextString="[itemInCartPrice]" Version="V5">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="BzBYCqv_J0Kd6pzpV8073g" DesignTimeRectangle="764, 327, 233, 156" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='3' tableRow='2' tag='TD' /&gt;" Guid="9ea893c0-256a-41ff-a9a3-2a6bc782d3ef" InformativeScreenshot="37ae6081d42aa9bd94e328c4d8eaef29.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/zny41GCtCUa1HvDBiPLGXQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Found price: &quot;+itemInCartPrice+&quot;. Desired price: &quot;+in_price.ToString+&quot;.&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Found price: &quot;+itemInCartPrice+&quot;. Desired price: &quot;+in_price.ToString+&quot;.&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -253,16 +222,30 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Name: &quot;+itemInCartName+&quot;. Desired name: &quot;+in_name+&quot;.&quot;]" />
-            <If Condition="[in_name.Equals(itemInCartName) And in_price.ToString.Equals(itemInCartPrice)]" sap:VirtualizedContainerService.HintSize="520,548.8" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Name: &quot;+itemInCartName+&quot;. Desired name: &quot;+in_name+&quot;.&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <If Condition="[in_name.Equals(itemInCartName) And in_price.ToString.Equals(itemInCartPrice)]" sap:VirtualizedContainerService.HintSize="451.2,431.2" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Is valid" sap:VirtualizedContainerService.HintSize="449.6,233.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Is valid" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Valid element&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Valid element&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -288,9 +271,16 @@
         </ActivityFunc>
       </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="79P5BroeGkOU2NHUIw-32g" IconBase64="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" InformativeScreenshot="e6b52154f011dcf9c804c24a3fdb6457.jpg" Reference="VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g" Selector="&lt;html app='msedge.exe' title='STORE' /&gt;" Url="[in_baseUrl+in_mainUrl]" Version="V2" />
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="79P5BroeGkOU2NHUIw-32g" IconBase64="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" InformativeScreenshot="e6b52154f011dcf9c804c24a3fdb6457.jpg" Reference="VLyBuG8JQ0qruJW2fqyr9w/UUSd00pvnEe6H1uSORWa1g" Selector="&lt;html app='msedge.exe' title='STORE' /&gt;" Url="[in_baseUrl+in_mainUrl]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="555.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;ValidateItem end&quot;]" />
+    <ui:LogMessage DisplayName="Workflow end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;ValidateItem end&quot;]" />
   </Sequence>
 </Activity>
