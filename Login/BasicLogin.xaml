@@ -126,7 +126,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BasicLogin" sap:VirtualizedContainerService.HintSize="775.6,2315.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BasicLogin" sap:VirtualizedContainerService.HintSize="662.8000000000001,2315.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,7 +235,7 @@
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="6f73abb0-0974-428c-a2a5-5bfbb139fe08" ContentHash="IOIznsulHEKbphVlzIfaBg" CvElementArea="1153, 622, 101, 51" CvTextArea="1175, 636, 56, 23" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="1156, 623, 96, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Log in' parentid='logInModal' tag='BUTTON' /&gt;" Guid="419853b2-1eaf-4bd5-82d3-d8477149b582" InformativeScreenshot="148b24f10e2f404c9bcf216814d21088.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/LMQuAL8GhUWwuSLnTV-GQQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="Check if  'Wrong password' alert is shown" DelayBefore="0" DisplayName="Login succeeded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,557.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="701ef12b-c9c8-4ddc-9676-b01ae5cc87ca" Timeout="3" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Check if  'Wrong password' alert is shown." DelayBefore="0" DisplayName="Login succeeded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,557.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="701ef12b-c9c8-4ddc-9676-b01ae5cc87ca" Timeout="2" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence sap2010:Annotation.AnnotationText="Invalid credentials" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,212.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>

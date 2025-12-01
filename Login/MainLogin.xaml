@@ -126,7 +126,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="777.2,810.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login_" sap:VirtualizedContainerService.HintSize="662.8000000000001,810.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
     </Sequence.Variables>
@@ -165,7 +165,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Simple log in using given credentials" DisplayName="Basic login" sap:VirtualizedContainerService.HintSize="416,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Simple log in using given credentials." DisplayName="Basic login" sap:VirtualizedContainerService.HintSize="416,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>

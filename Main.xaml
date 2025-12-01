@@ -108,7 +108,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="662.8000000000001,3273.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="662.8000000000001,3468.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="/index.html" Name="mainUrl" />
       <Variable x:TypeArguments="x:String" Default="/cart.html" Name="cartUrl" />
@@ -127,7 +127,7 @@
       <Variable x:TypeArguments="x:String" Default="A1:E7" Name="range" />
       <Variable x:TypeArguments="x:String" Default="Sheet1" Name="sheetName" />
       <Variable x:TypeArguments="x:String" Default="Data\PO.xlsx" Name="workbookPath" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_foundProductsWithQty" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_filteredProductsWithQty" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -142,7 +142,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kill all processes of a certain type" DisplayName="Kill Processes" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Utils\KillCustomProcesses.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all processes of a certain type." DisplayName="Kill Processes" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Utils\KillCustomProcesses.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_processName">[processName]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -152,7 +152,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get username and password from user" DisplayName="Get Credentials From User" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Input\GetCredentialsFromUser.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Gets the username and password from the user." DisplayName="Get Credentials From User" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Input\GetCredentialsFromUser.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_username">[username]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_password">[password]</OutArgument>
@@ -210,7 +210,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap2010:Annotation.AnnotationText="A System.Exception was thrown" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,268.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <Sequence sap2010:Annotation.AnnotationText="A System.Exception occured." DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,268.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,7 +236,7 @@
     </TryCatch>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,673.6" sap2010:WorkflowViewState.IdRef="TryCatch_11">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Clears the cart before the app logic" DisplayName="Verify if cart is empty" sap:VirtualizedContainerService.HintSize="449.6,180" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Cart\VerifyCart.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Clears the cart before the app logic." DisplayName="Verify if cart is empty" sap:VirtualizedContainerService.HintSize="449.6,180" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Cart\VerifyCart.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_cartUrl">[cartUrl]</InArgument>
@@ -255,7 +255,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap2010:Annotation.AnnotationText="A System.Exception was thrown" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,268.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence sap2010:Annotation.AnnotationText="A System.Exception occured." DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,268.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -279,36 +279,56 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract products" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="ExtractData\ExtractProducts.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Extracts the available products with useful information including the category." DisplayName="Extract products" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="ExtractData\ExtractProducts.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_products">[dt_products]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract info from excel" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="ExtractData\ExtractProductsFromExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Extracts the information from excel in order to select the correct products." DisplayName="Extract info from excel" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="ExtractData\ExtractProductsFromExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_productsFromExcel">[dt_productsFromExcel]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_range">[range]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_sheetName">[sheetName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_workbookPath">[workbookPath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Filter products" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Filter\FilterProducts.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Filters the products based on the information extracted from the excel. For every product, the needed quantity is specified." DisplayName="Filter products" sap:VirtualizedContainerService.HintSize="451.2,241.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Filter\FilterProducts.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_foundProductsWithQty">[dt_foundProductsWithQty]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_filteredProductsWithQty">[dt_filteredProductsWithQty]</OutArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_productsFromExcel">[dt_productsFromExcel]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_products">[dt_products]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add items" sap:VirtualizedContainerService.HintSize="451.2,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Cart\AddAllItems.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Adds all the correct items to the cart as many times as requested." DisplayName="Add items" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Cart\AddAllItems.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_foundProductsWithQty">[dt_foundProductsWithQty]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_filteredProductsWithQty">[dt_filteredProductsWithQty]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[baseUrl]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[mainUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kill al processes of a certain type" DisplayName="Kill Processes" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Utils\KillCustomProcesses.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all processes of a certain type." DisplayName="Kill Processes" sap:VirtualizedContainerService.HintSize="451.2,212" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Utils\KillCustomProcesses.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_processName">[processName]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
