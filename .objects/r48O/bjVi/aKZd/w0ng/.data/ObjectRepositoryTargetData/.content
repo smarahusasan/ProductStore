@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VlXsPOm0lkmUYs2AOLk7eg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="ae33ad42-e3a7-4fc5-9416-a53f784a508c" DesignTimeRectangle="1126, 920, 126, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Purchase' parentid='orderModal' tag='BUTTON' /&gt;" Guid="bde657a0-a121-42f5-a3aa-5ff188f9df3f" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="ed61637edc6df3dd6f5c758a03238e58.png" xmlns="">0OAcyASDTREOel0AXXVczGw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

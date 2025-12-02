@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Place order × Total Na…",
+  "Type": "Element",
+  "Id": "APsi7EaY3EyrjbWaITDwDw",
+  "Reference": "VLyBuG8JQ0qruJW2fqyr9w/APsi7EaY3EyrjbWaITDwDw",
+  "ParentRef": "VLyBuG8JQ0qruJW2fqyr9w/aKZdb1FSb0ikdRwsWfjtoQ",
+  "Created": "2025-12-01T21:50:35.0773552Z",
+  "Updated": "2025-12-01T21:50:35.0773552Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

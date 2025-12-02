@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oPrFFcgFCEme1n2XZ9xTaQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" DesignTimeRectangle="667, 391, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='country' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1172412f-c11a-494a-b050-21282f360162" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="665, 339, 72, 18" CvTextArgument="Country:" CvType="Text" DesignTimeRectangle="667, 335, 70, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Country:' /&gt;" Guid="fbc8a11d-b18a-49c1-bf91-86e02e721879" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6ad44e68a08e08adfc19adf50a2d7779.png" xmlns="">0N_KQzvG9F0iG_YWoYhu8zw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

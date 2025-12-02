@@ -119,7 +119,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractFiltersFromExcel" sap:VirtualizedContainerService.HintSize="774,477.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractFiltersFromExcel" sap:VirtualizedContainerService.HintSize="662.8000000000001,477.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,7 +133,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,292.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_workbookPath]">
+    <ui:ExcelApplicationScope Password="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use excel app" sap:VirtualizedContainerService.HintSize="483.2,292.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" SensitivityOperation="None" WorkbookPath="[in_workbookPath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -145,7 +145,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[out_dt_productsFromExcel]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="416,87.2" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="[in_range]" SheetName="[in_sheetName]" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[out_dt_productsFromExcel]" DisplayName="Read product info from excel" sap:VirtualizedContainerService.HintSize="416,87.2" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="[in_range]" SheetName="[in_sheetName]" />
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
