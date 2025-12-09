@@ -116,7 +116,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddRowToDataTable" sap:VirtualizedContainerService.HintSize="778.8000000000001,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddRowToDataTable" sap:VirtualizedContainerService.HintSize="790.8000000000001,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
     </Sequence.Variables>
@@ -133,7 +133,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign DisplayName="Create a new entry in the filtered products datatable" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Create a new row matching the product's schema" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
       </Assign.To>
@@ -141,15 +141,15 @@
         <InArgument x:TypeArguments="sd:DataRow">[in_out_dt_filteredProductsWithNewColumn.NewRow()]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign the values from the FIRST found product" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign the properties from the FIRST found product" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:Object[]">[newRow.ItemArray]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:Object[]">[CType(in_queryResult.First().ItemArray.Clone(), Object())]</InArgument>
+        <InArgument x:TypeArguments="s:Object[]">[CType((in_queryResult.First()).ItemArray.Clone(), Object())]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Assign the value for 'Quantity' column" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign the value to the column" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Object">[newRow(in_columnName)]</OutArgument>
       </Assign.To>
@@ -157,7 +157,7 @@
         <InArgument x:TypeArguments="x:Int32">[in_currentValueForColumn]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[in_out_dt_filteredProductsWithNewColumn]" DisplayName="Add found product" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[in_out_dt_filteredProductsWithNewColumn]" DisplayName="Add product to datatable" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
     <ui:LogMessage DisplayName="Workflow end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddRowToDataTable start&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

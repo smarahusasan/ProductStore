@@ -160,19 +160,20 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="938,4455.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="790,2900.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,4432" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V2">
+    <ui:LogMessage DisplayName="Workflow start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;CheckoutOrder start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2537.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,4238.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,2335.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,127 +246,24 @@
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="61e4e387-92a9-4ad8-9a3a-279e84444914" ContentHash="k1jWnMBNOEKnGfln3ruDbQ" DesignTimeRectangle="1312, 325, 149, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Place Order' /&gt;" Guid="7878c0c8-e25d-4bb3-a7fd-8466376fa78c" InformativeScreenshot="359b6bbbf28d4c518b791452feb7ed89.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/H1k0aIQ3HUKClEy4h7-UmA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check if chekout popup appeared" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,590.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Timeout="1" Version="V5">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Checkout popup appeared&quot;]">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:LogMessage>
-                </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,176.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Checkout popup did not appear&quot;]">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:LogMessage>
-                  <Throw Exception="[New System.Exception(&quot;Checkout popup did not appear&quot;)]" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Throw_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Throw>
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="FYlf82DLhUW-LMiNvYJ1Kw" DesignTimeRectangle="647, 78, 625, 1026" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='modal-content' parentid='orderModal' tag='DIV' /&gt;" Guid="b1a1ac31-340f-4b94-97dc-5a6d2dca0b86" InformativeScreenshot="d5a71fb19546730ade36b35a588a0b45.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/APsi7EaY3EyrjbWaITDwDw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
-              </uix:NCheckState.Target>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fill in the necesary info" sap:VirtualizedContainerService.HintSize="451.2,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Checkout\FillInCheckoutInfo.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_cartUrl">[in_cartUrl]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_name">[in_name]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_country">[in_country]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_city">[in_city]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_creditCard">[in_creditCard]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_month">[in_month]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_year">[in_year]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </uix:NCheckState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DeselectAfter="True" DisplayName="Type name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_name]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="srBokIUt0UW-dmfZRx19Qw" DesignTimeRectangle="667, 268, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' type='text' /&gt;" Guid="75b6446f-d522-4243-a8d2-8fd7783b382a" InformativeScreenshot="185fc5b09ec13118d84d39cca1f1596d.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/I4RNVF7LmkCnzscqOISXvw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="666, 215, 52, 17" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="667, 212, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Name:' /&gt;" Guid="481d344c-baec-48e6-864b-3fe77f3f7b4e" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DeselectAfter="True" DisplayName="Type country" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_country]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="oPrFFcgFCEme1n2XZ9xTaQ" DesignTimeRectangle="667, 391, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='country' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1172412f-c11a-494a-b050-21282f360162" InformativeScreenshot="6ad44e68a08e08adfc19adf50a2d7779.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/VltnjpC8mUeU8ESIFz5NjQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="665, 339, 72, 18" CvTextArgument="Country:" CvType="Text" DesignTimeRectangle="667, 335, 70, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Country:' /&gt;" Guid="fbc8a11d-b18a-49c1-bf91-86e02e721879" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DeselectAfter="True" DisplayName="Type city" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_city]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="fyFE788hb0-6dquFRJnV7Q" DesignTimeRectangle="667, 514, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='city' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='City:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e96f6baa-8f6a-45b6-8993-45ce6439175b" InformativeScreenshot="a4625a9295c9ce2a2303469a9e3dcd57.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/UXgnCbPcMUmCV9pCU5rhqg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="665, 461, 38, 18" CvTextArgument="City:" CvType="Text" DesignTimeRectangle="667, 458, 37, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='City:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='City:' /&gt;" Guid="460cf75e-0cb5-4479-a089-1b235072c8e4" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type credit card number" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_creditCard]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="ACTjmMXJYU-RIU-bDWQ1oQ" DesignTimeRectangle="667, 638, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='card' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='Credit card:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d50b2347-a869-4bd9-922a-ff6c9912c769" InformativeScreenshot="690fd6349d122655d6d928c33bed2fd7.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/jCkNcJRbUUiMWptTf2v2Hw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="665, 584, 95, 17" CvTextArgument="Credit card:" CvType="Text" DesignTimeRectangle="667, 581, 93, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Credit card:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Credit card:' /&gt;" Guid="a7742d93-7fdb-47ce-9a71-7584d821a69d" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type month" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_month]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="VokE0r_RR02CKKnK8nnYPw" DesignTimeRectangle="667, 761, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='month' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='Month:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d4f08f78-3d67-4a7f-b790-b016cf94c5a4" InformativeScreenshot="72738cb7a6631067e9fddb7c8308c6a5.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/L__k1BW9mk2WU2qZLNmjuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="666, 709, 58, 16" CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="667, 705, 58, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Month:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Month:' /&gt;" Guid="82be17af-33ee-4681-b66f-63cb8fc26253" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type year" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="Simulate" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Text="[in_year]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" ContentHash="5Y9DudJ0uU2pAbT79GXEHw" DesignTimeRectangle="667, 884, 585, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='year' matching:id='fuzzy' fuzzylevel:id='0.0' aaname='Year:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e364a569-28a3-46c5-87ff-509820fad005" InformativeScreenshot="9b626c76edf7300da099fab1f98261cb.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/N_svgiEQ20i3itLR98pdPg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ec666bbb-d181-4608-93a3-c996908600bb" CvTextArea="665, 831, 41, 16" CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="667, 828, 39, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Year:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Year:' /&gt;" Guid="33570cf3-01ea-499b-b2bb-4241d6537e47" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
+            </ui:InvokeWorkflowFile>
             <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Purchase" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ae33ad42-e3a7-4fc5-9416-a53f784a508c" ContentHash="VlXsPOm0lkmUYs2AOLk7eg" DesignTimeRectangle="1126, 920, 126, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Purchase' parentid='orderModal' tag='BUTTON' /&gt;" Guid="bde657a0-a121-42f5-a3aa-5ff188f9df3f" InformativeScreenshot="ed61637edc6df3dd6f5c758a03238e58.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/w0ngS9bpG0uD_IxCq9s3FQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
@@ -445,5 +343,6 @@
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Workflow end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;CheckoutOrder end&quot;]" />
   </Sequence>
 </Activity>
