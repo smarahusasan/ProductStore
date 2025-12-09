@@ -113,26 +113,26 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DeleteFirstProduct" sap:VirtualizedContainerService.HintSize="790,1462.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DeleteFirstProduct" sap:VirtualizedContainerService.HintSize="651.6,1474.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Workflow start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;DeleteFirstProduct start&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1099.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="4de3c009-9544-447d-8c88-aecfbb9a15c5" Version="V2">
+    <ui:LogMessage DisplayName="DeleteFirstProduct start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;DeleteFirstProduct start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1111.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="4de3c009-9544-447d-8c88-aecfbb9a15c5" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,896.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,908.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if the 'Delete' button for the first element is found" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,652" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4de3c009-9544-447d-8c88-aecfbb9a15c5" Timeout="3" Version="V5">
+            <uix:NCheckState DisplayName="Check if the 'Delete' button for the first element is found" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,656" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4de3c009-9544-447d-8c88-aecfbb9a15c5" Timeout="3" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -180,7 +180,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="{x:Null}" AlterIfDisabled="False" ClickType="Single" DisplayName="Delete product" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,184.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4de3c009-9544-447d-8c88-aecfbb9a15c5" Version="V5">
+            <uix:NClick ActivateBefore="{x:Null}" AlterIfDisabled="False" ClickType="Single" DisplayName="Delete product" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,188.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4de3c009-9544-447d-8c88-aecfbb9a15c5" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="3e051f26-da0d-4eed-8ebb-41a4b3d9b496" ContentHash="qWNYIj8zgUe3IiyKJyhl5w" DesignTimeRectangle="1003, 347, 54, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' aaname='Delete' /&gt;" Guid="9cbc5261-9407-4fb6-8224-5b14682982d7" InformativeScreenshot="3ade31e4bb4d70508ca48c26d419a243.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/6VH6R4TDZke_-YiEtOncOQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
@@ -206,6 +206,6 @@
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Workflow end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;DeleteFirstProduct end&quot;]" />
+    <ui:LogMessage DisplayName="DeleteFirstProduct end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;DeleteFirstProduct end&quot;]" />
   </Sequence>
 </Activity>
