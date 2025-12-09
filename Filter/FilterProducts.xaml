@@ -108,9 +108,13 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FilterProducts" sap:VirtualizedContainerService.HintSize="662.8000000000001,2118.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FilterProducts" sap:VirtualizedContainerService.HintSize="969.2,2114.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="exists" />
     </Sequence.Variables>
@@ -143,15 +147,16 @@
         <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_productsFromExcel]" DisplayName="For each product in excel" sap:VirtualizedContainerService.HintSize="486.4,1641.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_productsFromExcel]" DisplayName="For each product in excel" sap:VirtualizedContainerService.HintSize="486.4,1637.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentProductInExcel" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,1460" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,1456" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_tmpProductsWithQty" />
+              <Variable x:TypeArguments="sd:DataRow" Name="foundProduct" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -160,12 +165,12 @@
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,696.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <TryCatch.Try>
-                <Assign DisplayName="Get products matching the filter" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign DisplayName="Get THE FIRST product matching the filter" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="sd:DataTable">[dt_tmpProductsWithQty]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="sd:DataTable">[(From p In in_dt_products.AsEnumerable() Where p("Category").ToString=currentProductInExcel("Category").ToString AndAlso p("Name").ToString.ToLower.Contains(currentProductInExcel("Brand").ToString.ToLower) AndAlso CDbl(p("Price").ToString.Replace("$","").Trim) &gt;= CDbl(currentProductInExcel("Min price per unit")) AndAlso CDbl(p("Price").ToString.Replace("$","").Trim) &lt;= CDbl(currentProductInExcel("Max price per unit")) Select p).CopyToDataTable()]</InArgument>
+                    <InArgument x:TypeArguments="sd:DataTable">[(From p In in_dt_products.AsEnumerable() Where p("Category").ToString=currentProductInExcel("Category").ToString AndAlso p("Name").ToString.ToLower.Contains(currentProductInExcel("Brand").ToString.ToLower) AndAlso CDbl(p("Price").ToString.Replace("$","").Trim) &gt;= CDbl(currentProductInExcel("Min price per unit")) AndAlso CDbl(p("Price").ToString.Replace("$","").Trim) &lt;= CDbl(currentProductInExcel("Max price per unit")) Select p).Take(1).CopyToDataTable()]</InArgument>
                   </Assign.Value>
                 </Assign>
               </TryCatch.Try>
@@ -221,8 +226,8 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Quantity" DataTable="[dt_tmpProductsWithQty]" DefaultValue="[currentProductInExcel(&quot;Qty&quot;).ToString]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
-                  <ui:MergeDataTable Destination="[out_dt_filteredProductsWithQty]" DisplayName="Append products to datatable" sap:VirtualizedContainerService.HintSize="416,161.6" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_tmpProductsWithQty]" />
+                  <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Quantity" DataTable="[dt_tmpProductsWithQty]" DefaultValue="[currentProductInExcel(&quot;Qty&quot;).ToString]" DisplayName="Add 'Quantity' column to found products" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+                  <ui:MergeDataTable Destination="[out_dt_filteredProductsWithQty]" DisplayName="Append products to datatable" sap:VirtualizedContainerService.HintSize="416,161.6" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add" Source="[dt_tmpProductsWithQty]" />
                 </Sequence>
               </If.Then>
               <If.Else>
