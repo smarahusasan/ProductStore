@@ -1,0 +1,261 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ValidateItemsInCart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dt_filteredProductsWithQty" Type="InArgument(sd:DataTable)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="in_cartUrl" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="in_baseUrl" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ValidateItemsInCart_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Threading</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationUI</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ValidateItemsInCart" sap:VirtualizedContainerService.HintSize="835.6,1960" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="ValidateProductsInCart start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;ValidateProductsInCart start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1596.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="25b253ca-d481-4210-b594-e0c1cd96e900" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1394.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="joinResult" />
+              <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="groupFilteredProducts" />
+              <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="groupProductsInCart" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_itemsInCart" />
+              <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="diffs" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_itemsInCart]" DelayAfter="0" DelayBefore="0" DisplayName="Extract products from cart" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Pic' ReferenceIdx='0' Name='Pic'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Pic Src' ReferenceIdx='1' Name='Pic Src' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Title' ReferenceIdx='2' Name='Title'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price' ReferenceIdx='3' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='x' ReferenceIdx='4' Name='x'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='x Url' ReferenceIdx='5' Name='x Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Pic' attr='fulltext' name2='Pic Src' attr2='src' /&gt;&lt;column name='Title' attr='fulltext' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='x' attr='fulltext' name2='x Url' attr2='href' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,193.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="25b253ca-d481-4210-b594-e0c1cd96e900" Version="V5">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.demoblaze.com/cart.html" ContentHash="7nPvO135mU2c7TcT1_cVwQ" DesignTimeRectangle="14, 323, 1248, 373" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="6a20d6a7-861f-4bf2-ad58-0b96b3023717" InformativeScreenshot="fa7d0de29500d66cd72aec6a2574ad2a.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/hqYgkrK4oEGuHvUEw6R7dQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <Assign DisplayName="Group products in cart by name" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:IEnumerable(x:Object)">[groupProductsInCart]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:IEnumerable(x:Object)">[dt_itemsInCart.AsEnumerable().GroupBy(Function(p) p.Field(Of String)("Name")).Select(Function(gr) New With{ .Name=gr.Key,.Qty=gr.Count()}).ToList()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Group filtered products" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:IEnumerable(x:Object)">[groupFilteredProducts]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:IEnumerable(x:Object)">[in_dt_filteredProductsWithQty.AsEnumerable().Select(Function(p) New With{.Name=p.Field(Of String)("Name"), .Qty=p.Field(Of Integer)("Quantity")}).ToList()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Join datatables" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:IEnumerable(x:Object)">[joinResult]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:IEnumerable(x:Object)">[From prodInCart In groupProductsInCart.Cast(Of Object)().Select(Function(p) New With { .Name = CType(p.GetType().GetProperty("Name").GetValue(p), String), .Qty = CType(p.GetType().GetProperty("Qty").GetValue(p), Integer) }) Group Join filteredProd In groupFilteredProducts.Cast(Of Object)().Select(Function(fp) New With { .Name = CType(fp.GetType().GetProperty("Name").GetValue(fp), String), .Qty = CType(fp.GetType().GetProperty("Qty").GetValue(fp), Integer) }) On prodInCart.Name Equals filteredProd.Name Into gj = Group From filteredRow In gj.DefaultIfEmpty() Select New With { .Name = prodInCart.Name, .QtyCart = prodInCart.Qty, .QtyFilterd = If(filteredRow IsNot Nothing, filteredRow.Qty, 0) }]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Find different rows" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:IEnumerable(x:Object)">[diffs]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:Object)">[joinResult.Where(Function(x) CType(CType(x, System.Data.DataRow)("QtyCart"), Integer) &lt;&gt; CType(CType(x, System.Data.DataRow)("QtyOther"), Integer)).ToList()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[diffs.Count=0]" sap:VirtualizedContainerService.HintSize="451.2,423.2" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Valid data in cart&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,177.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw Exception="[new BusinessRuleException(&quot;Invalid products in cart!&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="n1p4zlNpzUaJL4Iv6COM0A" IconBase64="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" InformativeScreenshot="5b4ed53f3baa866bacfcebe6af55870d.jpg" Reference="VLyBuG8JQ0qruJW2fqyr9w/sCg0KtcBo0-pYGr8ILs9QQ" Selector="&lt;html app='msedge.exe' title='STORE' /&gt;" Url="[in_baseUrl+in_cartUrl]" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="ValidateProductsInCart end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;ValidateProductsInCart end&quot;]" />
+  </Sequence>
+</Activity>

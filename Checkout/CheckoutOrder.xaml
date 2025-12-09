@@ -1,5 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CheckoutOrder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CheckoutOrder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_dt_filteredProductsWithQty" Type="InArgument(sd:DataTable)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
     <x:Property Name="in_screenshotFilepath" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
@@ -160,26 +165,38 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="651.6,2900.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="835.6,3116.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="CheckoutOrder start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;CheckoutOrder start&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2537.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,2753.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,2335.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,2551.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <uix:NGoToUrl DelayAfter="0" DelayBefore="0" DisplayName="Navigate to cart" sap:VirtualizedContainerService.HintSize="451.2,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Url="[in_baseUrl+in_cartUrl]" Version="V5" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Checks that only the right products where added" DisplayName="Validate products" sap:VirtualizedContainerService.HintSize="451.2,216" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Validate\ValidateProductsInCart.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_filteredProductsWithQty">[in_dt_filteredProductsWithQty]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_cartUrl">[in_cartUrl]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
             <uix:NCheckState DelayBefore="0" DisplayName="Check if the total value exists" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,564.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Timeout="3" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -326,9 +343,9 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.OCREngine>
-        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
           <ActivityFunc.Argument>
-            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
           </ActivityFunc.Argument>
         </ActivityFunc>
       </uix:NApplicationCard.OCREngine>
