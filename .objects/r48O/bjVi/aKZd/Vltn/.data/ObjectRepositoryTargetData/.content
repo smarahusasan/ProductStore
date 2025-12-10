@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="qd4VPz99okyNpIFGhSsM0A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="s7Birpa5Jk6iw7wV2YdiDw" Reference="VLyBuG8JQ0qruJW2fqyr9w/VltnjpC8mUeU8ESIFz5NjQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" DesignTimeRectangle="676, 384, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;" Guid="94e83b77-9906-4891-b420-5aac48284583" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/cart.html" CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" DesignTimeRectangle="657, 328, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;" Guid="e5dcdbc4-f7cf-4785-9678-276db7c9aad2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" CvTextArea="675, 332, 52, 16" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="676, 328, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Name:' /&gt;" Guid="ca98dcf0-2dab-44ad-9017-897c2188645a" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" CvTextArea="656, 276, 53, 16" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="657, 272, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' check:innerText='Name:' /&gt;" Guid="331bc7ce-09f3-4dd3-8088-02b758025d85" SearchSteps="FuzzySelector, CV" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="d1e96e263f3006065cb0d24a9f8d121f.png" xmlns="">09vfNH4oTDkONH8olpzr8pw</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="96b1e864bd424cda361bfa54671773f3.png" xmlns="">0CQQbl9aGCEKdRaQ8Rjqt-Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>

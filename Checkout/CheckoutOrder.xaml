@@ -165,7 +165,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="835.6,3116.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckoutOrder" sap:VirtualizedContainerService.HintSize="706,3116.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -281,12 +281,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Purchase" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V5">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Purchase" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="ae33ad42-e3a7-4fc5-9416-a53f784a508c" ContentHash="VlXsPOm0lkmUYs2AOLk7eg" DesignTimeRectangle="1126, 920, 126, 47" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Purchase' parentid='orderModal' tag='BUTTON' /&gt;" Guid="bde657a0-a121-42f5-a3aa-5ff188f9df3f" InformativeScreenshot="ed61637edc6df3dd6f5c758a03238e58.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/w0ngS9bpG0uD_IxCq9s3FQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check if confirmation message appered" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,656" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Timeout="1" Version="V5">
+            <uix:NCheckState DisplayName="Check if confirmation message appered" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,656" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Timeout="1" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -334,7 +334,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NTakeScreenshot DelayAfter="0" DelayBefore="0" DisplayName="Take screenshot of confirmation message" FileName="[in_screenshotFilepath]" FileNameMode="[UiPath.UIAutomationNext.Enums.NFileNameMode.None]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,344" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V5">
+            <uix:NTakeScreenshot DelayAfter="0" DelayBefore="0" DisplayName="Take screenshot of confirmation message" FileName="[in_screenshotFilepath]" FileNameMode="[UiPath.UIAutomationNext.Enums.NFileNameMode.None]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,344" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="de2b69e0-7cfd-4ef3-9f55-7f1ae9a65f8a" Version="V5">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" ContentHash="r9e-8N6FqEyg315kYwnzrg" DesignTimeRectangle="649, 318, 598, 527" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='sweet-alert  showSweetAlert visible' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="baf195db-9e5b-4756-b908-122a7200c82b" InformativeScreenshot="1c740e5b5da79e4df41e423d54be373d.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/8GAwtH99OECQnbkuFgHaLg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None" />
               </uix:NTakeScreenshot.Target>

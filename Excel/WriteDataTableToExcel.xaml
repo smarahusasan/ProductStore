@@ -111,14 +111,14 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WriteDataTableToExcel" sap:VirtualizedContainerService.HintSize="651.6,511.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WriteDataTableToExcel" sap:VirtualizedContainerService.HintSize="851.6,511.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="WirteDataToExcel start" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;WirteDataToExcel start&quot;]" />
+    <ui:LogMessage DisplayName="WriteDataToExcel start" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;WriteDataToExcel start&quot;]" />
     <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[in_dt_productsFromExcel]" DisplayName="Write order result to file" sap:VirtualizedContainerService.HintSize="449.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="[in_startingCell]" WorkbookPath="[in_orderResultFilepath]" />
-    <ui:LogMessage DisplayName="WirteDataToExcel end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;WirteDataToExcel end&quot;]" />
+    <ui:LogMessage DisplayName="WriteDataToExcel end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;WriteDataToExcel end&quot;]" />
   </Sequence>
 </Activity>

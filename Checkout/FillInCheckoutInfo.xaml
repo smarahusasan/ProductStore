@@ -147,7 +147,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillInCheckoutInfo" sap:VirtualizedContainerService.HintSize="835.6,2708.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FillInCheckoutInfo" sap:VirtualizedContainerService.HintSize="851.6,2708.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -223,21 +223,21 @@
             </uix:NCheckState>
             <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DeselectAfter="True" DisplayName="Type name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="Simulate" ScopeIdentifier="eed1c1ee-4a1e-4e1e-9f9b-4d47988ef80d" Text="[in_name]" Version="V5">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" ContentHash="qd4VPz99okyNpIFGhSsM0A" DesignTimeRectangle="676, 384, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;" Guid="94e83b77-9906-4891-b420-5aac48284583" InformativeScreenshot="d1e96e263f3006065cb0d24a9f8d121f.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/VltnjpC8mUeU8ESIFz5NjQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" ContentHash="s7Birpa5Jk6iw7wV2YdiDw" DesignTimeRectangle="657, 328, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;" Guid="e5dcdbc4-f7cf-4785-9678-276db7c9aad2" InformativeScreenshot="96b1e864bd424cda361bfa54671773f3.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/VltnjpC8mUeU8ESIFz5NjQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" CvTextArea="675, 332, 52, 16" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="676, 328, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Name:' /&gt;" Guid="ca98dcf0-2dab-44ad-9017-897c2188645a" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" CvTextArea="656, 276, 53, 16" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="657, 272, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' parentid='orderModal' check:innerText='Name:' /&gt;" Guid="331bc7ce-09f3-4dd3-8088-02b758025d85" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DeselectAfter="True" DisplayName="Type country" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" ScopeIdentifier="eed1c1ee-4a1e-4e1e-9f9b-4d47988ef80d" Text="[in_country]" Version="V5">
+            <uix:NTypeInto ActivateBefore="True" ClipboardMode="Never" DelayAfter="0" DelayBefore="0" DisplayName="Type country" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="Simulate" ScopeIdentifier="eed1c1ee-4a1e-4e1e-9f9b-4d47988ef80d" Text="[in_country]" Version="V5">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" ContentHash="qd4VPz99okyNpIFGhSsM0A" DesignTimeRectangle="676, 384, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='name' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;" Guid="94e83b77-9906-4891-b420-5aac48284583" InformativeScreenshot="d1e96e263f3006065cb0d24a9f8d121f.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/VltnjpC8mUeU8ESIFz5NjQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
+                <uix:TargetAnchorable BrowserURL="demoblaze.com/cart.html" CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" ContentHash="Vjg4JmHJ_0CAM0IwP20DnQ" DesignTimeRectangle="657, 451, 586, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="709c4a35-102c-44ee-be19-f858022cba6c" InformativeScreenshot="fcd18b5031fa905d098b381682f6a3b0.png" IsResponsive="True" Reference="VLyBuG8JQ0qruJW2fqyr9w/yrJO-qm8bUm96JYf3zXiNQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="e3832d64-769f-4a06-9d69-bddca0696289" CvTextArea="675, 332, 52, 16" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="676, 328, 52, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Name:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Name:' /&gt;" Guid="ca98dcf0-2dab-44ad-9017-897c2188645a" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="fa87b445-7b97-4914-842e-bc7353b71162" CvTextArea="655, 399, 72, 20" CvTextArgument="Country:" CvType="Text" DesignTimeRectangle="657, 395, 70, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Country:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Country:' /&gt;" Guid="fb6cd4d2-beb3-4630-8c60-645d4299ae4d" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
