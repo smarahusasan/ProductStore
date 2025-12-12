@@ -109,14 +109,18 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="851.6,6634.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="851.6,6640.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Data\OrderStatus.xlsx" Name="orderResultFilepath" />
       <Variable x:TypeArguments="x:String" Default="A1" Name="startingCell" />
       <Variable x:TypeArguments="x:String" Default="I've attached the payment proof below. Thank you for your trust!" Name="mailBody" />
       <Variable x:TypeArguments="x:String" Default="Order confirmation" Name="mailSubject" />
-      <Variable x:TypeArguments="x:String" Default="smaranda.husasan@stud.ubbcluj.ro" Name="receiverEmail" />
-      <Variable x:TypeArguments="x:String" Default="smaranda.husasan@stud.ubbcluj.ro" Name="senderEmail" />
+      <Variable x:TypeArguments="x:String" Name="mailReceiver">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">smaranda.husasan@stud.ubbcluj.ro</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Default="smaranda.husasan@stud.ubbcluj.ro" Name="mailSender" />
       <Variable x:TypeArguments="x:String" Default="Data\Screenshots\confirmation.png" Name="screenshotFilepath" />
       <Variable x:TypeArguments="x:String" Default="2029" Name="year" />
       <Variable x:TypeArguments="x:String" Default="12" Name="month" />
@@ -345,7 +349,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,665.6" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,672" sap2010:WorkflowViewState.IdRef="TryCatch_18">
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Filters the products based on the information extracted from the excel. For every product, the needed quantity is specified." DisplayName="Filter products" sap:VirtualizedContainerService.HintSize="449.6,209.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Filter\FilterProducts.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -515,8 +519,8 @@
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Send a confirmation email containg the payment proof" DisplayName="Send confirmation email" sap:VirtualizedContainerService.HintSize="449.6,193.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Email\SendConfirmEmail.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="in_mailSender">[senderEmail]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_mailReceiver">[receiverEmail]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_mailSender">[mailSender]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_mailReceiver">[mailReceiver]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_mailSubject">[mailSubject]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_mailBody">[mailBody]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_screenshotFilepath">[screenshotFilepath]</InArgument>
