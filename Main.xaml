@@ -383,7 +383,7 @@
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Filters the products based on the information extracted from the excel. For every product, the needed quantity is specified." DisplayName="Filter products" sap:VirtualizedContainerService.HintSize="449.6,209.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Filter\FilterProducts.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_filteredProductsWithQty">[dt_filteredProductsWithQty]</OutArgument>
-            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_out_dt_productsFromExcel">[dt_productsFromExcel]</InOutArgument>
+            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_productsFromExcel">[dt_productsFromExcel]</InOutArgument>
             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_products">[dt_products]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>

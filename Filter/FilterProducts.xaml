@@ -5,7 +5,7 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="in_out_dt_productsFromExcel" Type="InOutArgument(sd:DataTable)">
+    <x:Property Name="io_dt_productsFromExcel" Type="InOutArgument(sd:DataTable)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
@@ -146,8 +146,8 @@
       </Assign.Value>
     </Assign>
     <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Quantity" DataTable="[out_dt_filteredProductsWithQty]" DisplayName="Add 'Quantity' column for filtered products" sap:VirtualizedContainerService.HintSize="486.4,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_10" />
-    <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Added to cart" DataTable="[in_out_dt_productsFromExcel]" DefaultValue="False" DisplayName="Add column to mark if the items were added to cart" sap:VirtualizedContainerService.HintSize="486.4,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_out_dt_productsFromExcel]" DisplayName="For each product in excel" sap:VirtualizedContainerService.HintSize="486.4,1136.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Added to cart" DataTable="[io_dt_productsFromExcel]" DefaultValue="False" DisplayName="Add column to mark if the items were added to cart" sap:VirtualizedContainerService.HintSize="486.4,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_12" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dt_productsFromExcel]" DisplayName="For each product in excel" sap:VirtualizedContainerService.HintSize="486.4,1136.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
