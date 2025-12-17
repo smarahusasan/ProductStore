@@ -102,7 +102,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1716,1750.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1716,1632.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isCorrectUser" />
       <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
@@ -129,7 +129,14 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1716,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;IsLoggedIn:&quot;+isLoggedIn.ToString+&quot;.IsCorrect:&quot;+isCorrectUser.ToString]" />
+    <ui:LogMessage DisplayName="Is logged in and is correct user message" sap:VirtualizedContainerService.HintSize="1716,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;IsLoggedIn:&quot;+isLoggedIn.ToString+&quot;.IsCorrect:&quot;+isCorrectUser.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
     <Pick sap2010:Annotation.AnnotationText="This Pick Branch selects the first branch whose Trigger completes.&#xA;Each Trigger uses a negated condition inside a Do While loop to block execution until the corresponding condition becomes True. The loop contains only a Delay activity, ensuring the Trigger takes longer to complete when its condition is not yet satisfied.&#xA;This way, the Pick Branch chooses the correct path depending on the logged-in user (if any)." sap:VirtualizedContainerService.HintSize="1716,1032" sap2010:WorkflowViewState.IdRef="Pick_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,7 +145,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <PickBranch DisplayName="The correct user is logged in" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_4">
         <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not (isLoggedIn And isCorrectUser)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
             <ui:InterruptibleWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
@@ -149,23 +156,20 @@
                 <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
               </Sequence>
             </ui:InterruptibleWhile.Body>
-            <ui:InterruptibleWhile.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not (isLoggedIn And isCorrectUser)" />
-            </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
         </PickBranch.Trigger>
-        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Already logged in&quot;]">
+        <ui:LogMessage DisplayName="Already logged in message " sap:VirtualizedContainerService.HintSize="451.2,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Already logged in&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
       </PickBranch>
-      <PickBranch DisplayName="A user is logged in but it's not te correct one" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+      <PickBranch DisplayName="A user is logged in but it's not the correct one" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_2">
         <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not (isLoggedIn And Not isCorrectUser)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
             <ui:InterruptibleWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
@@ -176,9 +180,6 @@
                 <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_2" />
               </Sequence>
             </ui:InterruptibleWhile.Body>
-            <ui:InterruptibleWhile.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not (isLoggedIn And Not isCorrectUser)" />
-            </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
         </PickBranch.Trigger>
         <Sequence sap:VirtualizedContainerService.HintSize="451.2,412.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -205,7 +206,7 @@
       </PickBranch>
       <PickBranch DisplayName="No use logged in" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_3">
         <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isLoggedIn]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
             <ui:InterruptibleWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
@@ -216,9 +217,6 @@
                 <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_3" />
               </Sequence>
             </ui:InterruptibleWhile.Body>
-            <ui:InterruptibleWhile.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="isLoggedIn" />
-            </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
         </PickBranch.Trigger>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute a simple login" sap:VirtualizedContainerService.HintSize="451.2,148.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">

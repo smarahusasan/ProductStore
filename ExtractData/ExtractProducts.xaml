@@ -148,7 +148,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractProducts" sap:VirtualizedContainerService.HintSize="651.6,2341.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractProducts" sap:VirtualizedContainerService.HintSize="1077.2,2341.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,7 +226,7 @@
                         <uix:TargetAnchorable BrowserURL="demoblaze.com/index.html" CVScreenId="87ea993c-5962-4797-95ae-71adaa463706" ContentHash="iFUbxFhAtkCgzjTjFBv62A" DesignTimeRectangle="266, 423, 319, 69" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' id='itemc' tag='A' /&gt;&quot;, categoryName)]" Guid="f5101a74-bc3c-4ae7-8a15-c5c3490390c4" InformativeScreenshot="b30c36fc587a99238899f2f804e5b7ee.png" Reference="VLyBuG8JQ0qruJW2fqyr9w/W5BQODhEh0u-jWfxeXmGjQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='STORE' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Now extracting products for category: &quot;+currentCategory(&quot;Name&quot;).ToString]">
+                    <ui:LogMessage DisplayName="Current category message" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Now extracting products for category: &quot;+currentCategory(&quot;Name&quot;).ToString]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -245,7 +245,7 @@
                 </ActivityAction>
               </ui:ForEachRow.Body>
             </ui:ForEachRow>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Extracted table data. Rows: &quot;+out_dt_products.RowCount.ToString]">
+            <ui:LogMessage DisplayName="Products count message" sap:VirtualizedContainerService.HintSize="451.2,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Extracted table data. Rows: &quot;+out_dt_products.RowCount.ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>

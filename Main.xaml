@@ -109,7 +109,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="851.6,6640.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1077.2,6640.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Data\OrderStatus.xlsx" Name="orderResultFilepath" />
       <Variable x:TypeArguments="x:String" Default="A1" Name="startingCell" />
@@ -212,8 +212,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_8" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[exception.Message]" />
+              <Rethrow DisplayName="Invalid credentials" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_8" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -229,8 +229,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_9" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exeception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_9" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -274,8 +274,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_10" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_10" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -319,8 +319,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_16" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_16" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -376,8 +376,8 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_20" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[exception.Message]" />
+              <Rethrow DisplayName="No products matches any filters" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_20" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -428,8 +428,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_13" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_13" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -481,8 +481,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_18" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message " sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[exception.Message]" />
+              <Rethrow DisplayName="Invalid checkout info" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_18" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -498,8 +498,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_19" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_19" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -545,8 +545,8 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[exception.Message]" />
-              <Rethrow sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_17" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Exception message" sap:VirtualizedContainerService.HintSize="416,121.6" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[exception.Message]" />
+              <Rethrow DisplayName="System exception" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Rethrow_17" />
             </Sequence>
           </ActivityAction>
         </Catch>

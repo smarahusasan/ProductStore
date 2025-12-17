@@ -124,13 +124,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddItemToCartWithQuantity" sap:VirtualizedContainerService.HintSize="851.6,2352" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddItemToCartWithQuantity" sap:VirtualizedContainerService.HintSize="1077.2,2352.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="AddItemToCartWithQuantity start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="{x:Null}" Message="[&quot;AddItemToCartWithQuantity start&quot;]">
+    <ui:LogMessage DisplayName="AddItemToCartWithQuantity start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;AddItemToCartWithQuantity start&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,13 +138,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1988.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="Simulate" IsIncognito="{x:Null}" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" OutUiElement="{x:Null}" ScopeGuid="97f11d54-37b4-4f06-af65-fd54338460a0" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="STORE" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1989.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="97f11d54-37b4-4f06-af65-fd54338460a0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1786.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1787.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="quantity" />
             </Sequence.Variables>
@@ -153,7 +153,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl ContinueOnError="{x:Null}" DelayAfter="0" DelayBefore="0" DisplayName="Navigate to product's page" sap:VirtualizedContainerService.HintSize="451.2,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Timeout="{x:Null}" Url="[in_product(&quot;Url&quot;).ToString]" Version="V5" />
+            <uix:NGoToUrl DelayAfter="0" DelayBefore="0" DisplayName="Navigate to product's page" sap:VirtualizedContainerService.HintSize="451.2,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Url="[in_product(&quot;Url&quot;).ToString]" Version="V5" />
             <Assign DisplayName="Get product's quantity" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[quantity]</OutArgument>
@@ -162,7 +162,7 @@
                 <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(in_product("Quantity").ToString)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="{x:Null}" Message="[&quot;Quantity for current item: &quot;+quantity.ToString]">
+            <ui:LogMessage DisplayName="Quantity for current item message" sap:VirtualizedContainerService.HintSize="451.2,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Quantity for current item: &quot;+quantity.ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -170,7 +170,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="Wait for the product's page to load" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="0" DisplayName="Check if 'Add to cart' button is found" Exists="{x:Null}" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,687.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" InUiElement="{x:Null}" OutUiElement="{x:Null}" Result="{x:Null}" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Timeout="3" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Wait for the product's page to load" DelayBefore="0" DisplayName="Check if 'Add to cart' button is found" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,687.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Timeout="3" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -179,7 +179,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="{x:Null}" Message="[&quot;Add button found&quot;]">
+                  <ui:LogMessage DisplayName="Add button found" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Add button found&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -197,7 +197,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="{x:Null}" Message="[&quot;Add button not found&quot;]">
+                  <ui:LogMessage DisplayName="Add button not found" sap:VirtualizedContainerService.HintSize="416,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[&quot;Add button not found&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -205,7 +205,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <Throw Exception="[new System.Exception(&quot;Button for add not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Add button not found" Exception="[new System.Exception(&quot;Button for add not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -219,15 +219,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:InterruptibleWhile Condition="[quantity&gt;0]" CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,552" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="{x:Null}">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[quantity&gt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,552.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,417.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,418.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add item to cart" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="AddToCart\AddItemToCart.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add item to cart" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AddToCart\AddItemToCart.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_productUrl">[in_product("Url").ToString]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
@@ -243,7 +243,7 @@
                 </Sequence>
               </ui:InterruptibleWhile.Body>
             </ui:InterruptibleWhile>
-            <uix:NGoToUrl ContinueOnError="{x:Null}" DelayAfter="0" DelayBefore="0" DisplayName="Navigate to main page" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Timeout="{x:Null}" Url="[in_baseUrl+in_mainUrl]" Version="V5" />
+            <uix:NGoToUrl DelayAfter="0" DelayBefore="0" DisplayName="Navigate to main page" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Url="[in_baseUrl+in_mainUrl]" Version="V5" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -265,7 +265,7 @@
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="AddItemToCartWithQuantity end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="{x:Null}" Message="[&quot;AddItemToCartWithQuantity end&quot;]">
+    <ui:LogMessage DisplayName="AddItemToCartWithQuantity end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddItemToCartWithQuantity end&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
