@@ -111,14 +111,48 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WriteDataTableToExcel" sap:VirtualizedContainerService.HintSize="851.6,511.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WriteDataTableToExcel" sap:VirtualizedContainerService.HintSize="743.6,1292" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="WriteDataToExcel start" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;WriteDataToExcel start&quot;]" />
-    <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[in_dt_productsFromExcel]" DisplayName="Write order result to file" sap:VirtualizedContainerService.HintSize="449.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="[in_startingCell]" WorkbookPath="[in_orderResultFilepath]" />
-    <ui:LogMessage DisplayName="WriteDataToExcel end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;WriteDataToExcel end&quot;]" />
+    <ui:LogMessage DisplayName="WriteDataToExcel start" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;WriteDataToExcel start&quot;]" />
+    <ui:WriteRange WorkbookPathResource="{x:Null}" DataTable="[in_dt_productsFromExcel]" DisplayName="Write order result to file" sap:VirtualizedContainerService.HintSize="451.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="[in_startingCell]" WorkbookPath="[in_orderResultFilepath]" />
+    <ui:FileExistsX DisplayName="Excel file was created" Exists="[fileExists]" sap:VirtualizedContainerService.HintSize="451.2,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_orderResultFilepath]" />
+    <If Condition="[fileExists]" sap:VirtualizedContainerService.HintSize="451.2,614.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Excel was created" sap:VirtualizedContainerService.HintSize="449.6,116" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Excel found" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;File found&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,360" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Excel not found" sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;File was not created&quot;]" />
+          <Throw DisplayName="Excel not fount" Exception="[New System.Exception(&quot;Excel was not created&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="WriteDataToExcel end" sap:VirtualizedContainerService.HintSize="451.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;WriteDataToExcel end&quot;]" />
   </Sequence>
 </Activity>
