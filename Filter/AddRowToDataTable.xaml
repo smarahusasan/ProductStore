@@ -5,17 +5,17 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="in_currentValueForColumn" Type="InArgument(x:Int32)">
+    <x:Property Name="in_valueForColumn" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="in_queryResult" Type="InArgument(sd:EnumerableRowCollection(sd:DataRow))">
+    <x:Property Name="in_productToAdd" Type="InArgument(sd:DataRow)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="in_out_dt_filteredProductsWithNewColumn" Type="InOutArgument(sd:DataTable)">
+    <x:Property Name="io_dt_productsWithNewColumn" Type="InOutArgument(sd:DataTable)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
@@ -116,7 +116,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddRowToDataTable" sap:VirtualizedContainerService.HintSize="651.6,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddRowToDataTable" sap:VirtualizedContainerService.HintSize="743.6,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
     </Sequence.Variables>
@@ -138,7 +138,7 @@
         <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="sd:DataRow">[in_out_dt_filteredProductsWithNewColumn.NewRow()]</InArgument>
+        <InArgument x:TypeArguments="sd:DataRow">[io_dt_productsWithNewColumn.NewRow()]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign DisplayName="Assign the properties from the FIRST found product" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -146,7 +146,7 @@
         <OutArgument x:TypeArguments="s:Object[]">[newRow.ItemArray]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:Object[]">[CType((in_queryResult.First()).ItemArray.Clone(), Object())]</InArgument>
+        <InArgument x:TypeArguments="s:Object[]">[CType(in_productToAdd.ItemArray.Clone(), Object())]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign DisplayName="Assign the value to the column" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -154,11 +154,11 @@
         <OutArgument x:TypeArguments="x:Object">[newRow(in_columnName)]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">[in_currentValueForColumn]</InArgument>
+        <InArgument x:TypeArguments="x:Object">[in_valueForColumn]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[in_out_dt_filteredProductsWithNewColumn]" DisplayName="Add product to datatable" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-    <ui:LogMessage DisplayName="AddRowToDataTable end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddRowToDataTable start&quot;]">
+    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[io_dt_productsWithNewColumn]" DisplayName="Add product to datatable" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+    <ui:LogMessage DisplayName="AddRowToDataTable end" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;AddRowToDataTable end&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

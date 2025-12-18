@@ -1,5 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="AddItemToCartWithQuantity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_productQuantity" Type="InArgument(x:Int32)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
     <x:Property Name="in_product" Type="InArgument(sd:DataRow)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
@@ -124,7 +129,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddItemToCartWithQuantity" sap:VirtualizedContainerService.HintSize="1077.2,2352.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddItemToCartWithQuantity" sap:VirtualizedContainerService.HintSize="783.6,2352.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,7 +164,7 @@
                 <OutArgument x:TypeArguments="x:Int32">[quantity]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(in_product("Quantity").ToString)]</InArgument>
+                <InArgument x:TypeArguments="x:Int32">[in_productQuantity]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:LogMessage DisplayName="Quantity for current item message" sap:VirtualizedContainerService.HintSize="451.2,60.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Quantity for current item: &quot;+quantity.ToString]">
@@ -219,7 +224,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[quantity&gt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,552.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,552.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,418.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -242,6 +247,9 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="quantity&gt;0" />
+              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
             <uix:NGoToUrl DelayAfter="0" DelayBefore="0" DisplayName="Navigate to main page" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="97f11d54-37b4-4f06-af65-fd54338460a0" Url="[in_baseUrl+in_mainUrl]" Version="V5" />
           </Sequence>
