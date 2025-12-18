@@ -153,7 +153,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign the right user is not logged in" sap:VirtualizedContainerService.HintSize="486.4,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign DisplayName="Assume the right user is not logged in" sap:VirtualizedContainerService.HintSize="486.4,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[out_isCorrectUser]</OutArgument>
               </Assign.To>

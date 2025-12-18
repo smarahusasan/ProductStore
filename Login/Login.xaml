@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_password" Type="InArgument(x:String)">
       <x:Property.Attributes>
@@ -54,6 +54,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,9 +101,13 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1716,1632.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1074.8,1761.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isCorrectUser" />
       <Variable x:TypeArguments="x:Boolean" Name="isLoggedIn" />
@@ -112,7 +117,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Login start" sap:VirtualizedContainerService.HintSize="1716,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Login start&quot;]">
+    <ui:LogMessage DisplayName="Login start" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Login start&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,7 +125,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check if a user is logged in and if it's the correct one" sap:VirtualizedContainerService.HintSize="1716,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login\IsUserLoggedIn.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check if a user is logged in and if it's the correct one" sap:VirtualizedContainerService.HintSize="486.4,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login\IsUserLoggedIn.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_isCorrectUser">[isCorrectUser]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
@@ -129,7 +134,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Is logged in and is correct user message" sap:VirtualizedContainerService.HintSize="1716,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;IsLoggedIn:&quot;+isLoggedIn.ToString+&quot;.IsCorrect:&quot;+isCorrectUser.ToString]">
+    <ui:LogMessage DisplayName="Is logged in and is correct user message" sap:VirtualizedContainerService.HintSize="486.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;IsLoggedIn:&quot;+isLoggedIn.ToString+&quot;.IsCorrect:&quot;+isCorrectUser.ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -137,99 +142,80 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Pick sap2010:Annotation.AnnotationText="This Pick Branch selects the first branch whose Trigger completes.&#xA;Each Trigger uses a negated condition inside a Do While loop to block execution until the corresponding condition becomes True. The loop contains only a Delay activity, ensuring the Trigger takes longer to complete when its condition is not yet satisfied.&#xA;This way, the Pick Branch chooses the correct path depending on the logged-in user (if any)." sap:VirtualizedContainerService.HintSize="1716,1032" sap2010:WorkflowViewState.IdRef="Pick_2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <PickBranch DisplayName="The correct user is logged in" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_4">
-        <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not (isLoggedIn And isCorrectUser)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-            <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              </Sequence>
-            </ui:InterruptibleWhile.Body>
-          </ui:InterruptibleWhile>
-        </PickBranch.Trigger>
-        <ui:LogMessage DisplayName="Already logged in message " sap:VirtualizedContainerService.HintSize="451.2,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Already logged in&quot;]">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:LogMessage>
-      </PickBranch>
-      <PickBranch DisplayName="A user is logged in but it's not the correct one" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_2">
-        <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Not (isLoggedIn And Not isCorrectUser)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
-            <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_2" />
-              </Sequence>
-            </ui:InterruptibleWhile.Body>
-          </ui:InterruptibleWhile>
-        </PickBranch.Trigger>
-        <Sequence sap:VirtualizedContainerService.HintSize="451.2,412.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <If Condition="[isLoggedIn And isCorrectUser]" sap:VirtualizedContainerService.HintSize="486.4,1160.8" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,112" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logout" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Login\Logout.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute a simple login" sap:VirtualizedContainerService.HintSize="416,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
+          <ui:LogMessage DisplayName="Already logged in message " sap:VirtualizedContainerService.HintSize="451.2,52" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Already logged in&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
         </Sequence>
-      </PickBranch>
-      <PickBranch DisplayName="No use logged in" sap:VirtualizedContainerService.HintSize="540.8,892.8" sap2010:WorkflowViewState.IdRef="PickBranch_3">
-        <PickBranch.Trigger>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isLoggedIn]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,280" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
-            <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,910.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:IfElseIfV2 Condition="[isLoggedIn And Not isCorrectUser]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451.2,850.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+            <ui:IfElseIfV2.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,240" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute a simple login" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
               </Sequence>
-            </ui:InterruptibleWhile.Body>
-          </ui:InterruptibleWhile>
-        </PickBranch.Trigger>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute a simple login" sap:VirtualizedContainerService.HintSize="451.2,148.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
-          <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
-          </ui:InvokeWorkflowFile.Arguments>
-        </ui:InvokeWorkflowFile>
-      </PickBranch>
-    </Pick>
-    <ui:LogMessage DisplayName="Login end" sap:VirtualizedContainerService.HintSize="1716,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Login end&quot;]">
+            </ui:IfElseIfV2.Else>
+            <ui:IfElseIfV2.ElseIfs>
+              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
+            </ui:IfElseIfV2.ElseIfs>
+            <ui:IfElseIfV2.Then>
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,424.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logout" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Login\Logout.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute a simple login" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Login\BasicLogin.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_baseUrl">[in_baseUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_mainUrl">[in_mainUrl]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </ui:IfElseIfV2.Then>
+          </ui:IfElseIfV2>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="Login end" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Login end&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Jc9NfsuZtEm30lcjJ0e5Nw" Reference="VLyBuG8JQ0qruJW2fqyr9w/i0JLVI9FDEmNJVPBsqeJsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="f5bRSR4Up0ifMP-LKnYNmw" Reference="VLyBuG8JQ0qruJW2fqyr9w/i0JLVI9FDEmNJVPBsqeJsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="689, 97, 560, 157" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='www.demoblaze.com says' role='dialog' /&gt;" Guid="977a9363-7166-4a25-a4ec-1755b84f502c" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='STORE - Profile 1 - Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="a52baaa842f55c5d31756ee47ad96c51.png" xmlns="">0FX0aA3giDUa2QgYHUwuifw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demoblaze.com/index.html" DesignTimeRectangle="689, 98, 560, 157" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='www.demoblaze.com says' role='dialog' /&gt;" Guid="78890d41-2f9a-4425-a301-3010d012f105" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='STORE - Profile 1 - Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5ec5d12b-8773-48cf-b520-07abfbe91e4a" CvTextArea="707, 156, 127, 20" CvTextArgument="Wrong password." CvType="Text" DesignTimeRectangle="709, 152, 520, 23" ElementType="Text" FuzzySelectorArgument="&lt;ctrl name='www.demoblaze.com says' matching:name='fuzzy' fuzzylevel:name='0.0' role='dialog' /&gt;&lt;ctrl name='Wrong password.' matching:name='fuzzy' fuzzylevel:name='0.0' role='text' check:text='Wrong password.' /&gt;" Guid="268ce656-8b5e-40e2-8fa7-d1eef11ce73a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="90d5d1f86a17120f1874def9f62b45d3.png" xmlns="">0FSQVSfNX-0yVaFS_pBxHUA</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>
